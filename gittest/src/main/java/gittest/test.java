@@ -11,7 +11,7 @@ public class test {
 		
 		System.out.println("네번째 송영민 입력함!");
 		
-		System.out.println("안녕");
+		System.out.println("다섯번째 장여울 입력~~~");
 	}
 
 }
