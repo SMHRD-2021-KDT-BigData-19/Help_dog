@@ -13,9 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/joinform")
-public class jorinform extends HttpServlet {
+public class joinform extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -44,7 +43,6 @@ public class jorinform extends HttpServlet {
         }
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, dbUser, dbPassword)) {
-            // 여기에서 데이터를 삽입하는 로직을 작성합니다.
             String sql = "INSERT INTO user_info (user_name, user_hp, user_id, user_pw, user_mail) VALUES (?, ?, ?, ?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             	preparedStatement.setString(1, user_name);

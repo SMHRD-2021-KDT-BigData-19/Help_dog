@@ -39,16 +39,6 @@
     top: 100%; /* 메뉴 아이템 아래에 위치하도록 설정합니다. */
     left: 0;
 }
-
-#nav ul li:hover > ul {
-    display: flex;
-    flex-direction: column;
-}
-        .phone-number-input {
-      display: flex;
-      align-items: center;
-      margin-right: 5px;
-    }
     .id-number-input {
       display: flex;
       align-items: center;
@@ -59,33 +49,20 @@
       align-items: center;
       margin-right: 5px;
     }
-    .email-number-input {
-      display: flex;
-      align-items: center;
-      margin-right: 5px;
-    }
-
-    .phone-number-input img {
-      margin-right: 10px;
-      width: 50px;
-      height: 50px;
-    }
+    
     .id-number-input img {
       margin-right: 10px;
+      margin-bottom: 20px;
       width: 50px;
       height: 50px;
     }
     .pw-number-input img {
       margin-right: 10px;
+      margin-bottom: 20px;
       width: 50px;
       height: 50px;
     }
-    .email-number-input img {
-      margin-right: 10px;
-      width: 50px;
-      height: 50px;
-    }
-    
+
         form {
             text-align: center;
         }
@@ -107,15 +84,15 @@
 
         .registration-form {
             background-color: #fddbb4;
-            padding: 60px;
+            padding: 100px;
             border-radius: 120px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 150%;
+            width: 100%;
             margin: 0 auto;
         }
         
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5em; /* 글자 크기를 조절하세요 */
             margin-bottom: 20px;
         }
 
@@ -142,13 +119,18 @@
     </style>
 </head>
 <body class="is-preload">
-    <div id="page-wrapper" style="margin-right: 200px;">
+    <div id="page-wrapper">
+
+            
+
             <nav id="nav">
                 <ul>
-                    <li><a href="로그인 전 메인화면.html" id="logo"> 🐶오래살개🐱</a></li>
+                    <li><a href="로그인 전.html" id="logo"> 🐶오래살개🐱</a></li>
                     <li>
+                        
                         <a href="#">메뉴(Menu)</a>
                         <ul>
+                            <li></li>
                             <li><a href="건강체크.html">건강 체크</a></li>
                             <li><a href="식사량.html">식사량</a></li>
                             <li><a href="운동량.html">운동량</a></li>
@@ -158,43 +140,37 @@
                     <li><a href="캘린더.html">캘린더(Calendar)</a></li>
                     <li><a href="팁.html">팁(Tip)</a></li>
                     <li><a href="로그인.html">로그인</a></li>
-                    <li><a href="마이페이지.html">마이페이지</a></li>
+                    <li>
+                        <a href="마이페이지.html">마이페이지</a>
+                       
+                    </li>
+    
                 </ul>
             </nav>
         <br>
         <div class="content">
         </div>
-        
-        <div class="registration-form" style="margin-top:100px;">
-            <form>
-                
-                <h1>회원가입</h1>
 
-                <div class="phone-number-input">
-                    <img src="images/핸드폰 아이콘 .png" alt="핸드폰 아이콘"></i>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="핸드폰 번호" required>
-                </div>
-                
+       <div class="registration-form">
+            <form action="loginForm" method="post"> <!-- Updated action attribute to point to the login servlet -->
+                <h1>로그인</h1>
+
                 <div class="id-number-input">
                     <img src="images/아이디 아이콘.png" alt="아이디 아이콘"></i>
-                <input type="text" id="userID" name="userID" placeholder="ID" required>
-                </div>
-
-                <div class="pw-number-input">
-                    <img src="images/비밀번호 아이콘.png" alt="비밀번호 아이콘"></i>
-                <input type="password" id="userPassword" name="userPassword" placeholder="PW" required>
-                </div>
-
-                <div class="email-number-input">
-                    <img src="images/이메일 아이콘.png" alt="이메일 아이콘"></i>
-                <input type="email" id="userEmail" name="userEmail" placeholder="E-mail" required>
+                    <input type="text" id="user_id" name="user_id" placeholder="ID" required>
                 </div>
                 
+                <div class="pw-number-input">
+                    <img src="images/비밀번호 아이콘.png" alt="비밀번호 아이콘"></i>
+                    <input type="password" id="user_pw" name="user_pw" placeholder="PW" required>
+                </div>
+               
                 <br>
-                <button type="submit">가입하기</button>
+                <button type="submit">로그인</button>
+                <button type="button" onclick="location.href='회원가입.html'">회원가입</button>
+
             </form>
         </div>
-
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
