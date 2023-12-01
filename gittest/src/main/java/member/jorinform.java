@@ -21,6 +21,8 @@ public class jorinform extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		 request.setCharacterEncoding("UTF-8");
+		 response.setCharacterEncoding("UTF-8");
+		 
 		 // 폼에서 전송된 데이터 가져오기
     	String user_name = request.getParameter("user_name");
     	String user_hp = request.getParameter("user_hp");
