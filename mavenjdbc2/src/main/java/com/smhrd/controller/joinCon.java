@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.domain.MemberDAO;
 import com.smhrd.domain.member_info;
-import com.smhrd.domain.member_web;
 
 
 public class joinCon extends HttpServlet {
@@ -25,11 +24,11 @@ public class joinCon extends HttpServlet {
       String user_hp = request.getParameter("user_hp");
       String user_name = request.getParameter("user_name");
       String user_pw = request.getParameter("user_pw");
-      String user_email = request.getParameter("user_email");
+      String user_mail = request.getParameter("user_mail");
       
       
       // 2. 가져온 값을 member_web 객체에 담아주기
-      member_info memberinfo = new member_info(user_id, user_hp, user_name, user_pw, user_email);
+      member_info memberinfo = new member_info(user_id, user_hp, user_name, user_pw, user_mail);
       
       // 3. DAO 객체 생성
       MemberDAO dao = new MemberDAO();
@@ -46,7 +45,7 @@ public class joinCon extends HttpServlet {
       if(cnt>0) {
          response.sendRedirect("joinSuccess.html");
       }else {
-         response.sendRedirect("join.html");
+         response.sendRedirect("회원가입.html");
       }
  // 위 아래 같은 식임!!!      
       

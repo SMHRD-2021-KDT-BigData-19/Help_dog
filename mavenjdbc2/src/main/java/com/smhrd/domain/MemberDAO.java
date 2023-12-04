@@ -42,7 +42,7 @@ public class MemberDAO {
 
    //로그인 기능 구현 
    public member_info selectMember(member_info inputMember) {
-	   member_web loginMember = null;
+	   member_info loginMember = null;
 	   try {
 		   	// 여러 데이터 가져올 경우 : selectList(id값, 매개변수) -> List<VO>
 		   	//										.xml의 SQL태그에서 resultType에 List가 아니라 

@@ -5,7 +5,7 @@ public class member_info {
 	private String user_id;
 	private String user_pw;
 	private String user_name;
-	private String user_email;
+	private String user_mail;
 	private String user_hp;
 	
 	// 생성자 5개 짜리, 2개 짜리 
@@ -15,7 +15,7 @@ public class member_info {
 		this.user_id = user_id;
 		this.user_pw = user_pw;
 		this.user_name = user_name;
-		this.user_email = user_email;
+		this.user_mail = user_mail;
 		this.user_hp = user_hp;
 	}
 	
@@ -50,12 +50,12 @@ public class member_info {
 		this.user_name = user_name;
 	}
 
-	public String getUser_email() {
-		return user_email;
+	public String getUser_mail() {
+		return user_mail;
 	}
 
-	public void setUser_email(String user_email) {
-		this.user_email = user_email;
+	public void setUser_mail(String user_email) {
+		this.user_mail = user_mail;
 	}
 
 	public String getUser_hp() {
@@ -68,8 +68,8 @@ public class member_info {
 
 	@Override
 	public String toString() {
-		return "member_info [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_email="
-				+ user_email + ", user_hp=" + user_hp + "]";
+		return "member_info [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_mail="
+				+ user_mail + ", user_hp=" + user_hp + "]";
 	}
 
 
