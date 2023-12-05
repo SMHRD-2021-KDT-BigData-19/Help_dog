@@ -41,11 +41,11 @@ public class loginCon extends HttpServlet {
     	  //Servlet에서 Session사용하려면 Session 객체 
     	  HttpSession session = request.getSession();
     	  session.setAttribute("loginMember", loginMember);
-    	  response.sendRedirect("main.jsp");
+    	  response.sendRedirect("loginafter.jsp");
       }else {
     	  System.out.println("로그인 실패 ㅠㅠ ");
     	  // 로그인 실패하면 login.html로 이동
-    	  response.sendRedirect("login.html");
+    	  response.sendRedirect("로그인.html");
       }
    }
 
