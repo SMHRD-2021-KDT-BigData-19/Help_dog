@@ -25,14 +25,15 @@ public class petUpdateCon extends HttpServlet {
             member_web loginMember = (member_web)session.getAttribute("loginMember");
             
             String id = loginMember.getId();	
-            String petName = request.getParameter("petName");
-            String petType = request.getParameter("petType");
-            String petGender = request.getParameter("petGender");
-            String petNe = request.getParameter("petNe");
-            String petBirth = request.getParameter("petBirth");
+            String petName = request.getParameter("pet_name");
+            String petType = request.getParameter("pet_type");
+            String petGender = request.getParameter("pet_gubun");
+            String petNe = request.getParameter("pet_jungsung");
+            String petBirth = request.getParameter("pet_date");
+            String petSign = request.getParameter("pet_etc");
             String submit = request.getParameter("sub");
             // Member 객체에 가져온 값을 담아주기
-            petMember update = new petMember(id, petName, petType, petGender, petNe, petBirth); 
+            petMember update = new petMember(id, petName, petType, petGender, petNe, petBirth, petSign); 
             
       
       

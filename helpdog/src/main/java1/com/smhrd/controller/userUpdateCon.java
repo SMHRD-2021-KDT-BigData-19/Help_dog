@@ -17,22 +17,24 @@ public class userUpdateCon extends HttpServlet {
    
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       
-      // post방식 인코딩
+           // post방식 인코딩
             request.setCharacterEncoding("UTF-8");
-            // 파라미터 수집
-            // session에서 email 가져오기
+   
+            // session에서 id 가져오기
             HttpSession session = request.getSession();
             member_web loginMember = (member_web)session.getAttribute("loginMember");
             
+            // 파라미터 수집
             String id = loginMember.getId();
-            String pw = request.getParameter("pw");
-            String hp = request.getParameter("hp");
-            String mail = request.getParameter("mail");
+            String name = request.getParameter("user_name");
+            String pw = request.getParameter("user_pw");
+            String hp = request.getParameter("user_hp");
+            String mail = request.getParameter("user_mail");
             // Member 객체에 가져온 값을 담아주기
-            member_web  update = new member_web(id, pw, hp, mail); 
+            member_web  update = new member_web(id,pw,name,mail,hp); 
             
       
-      
+           // 3. DAO 객체 생성
             MemberDAO dao = new MemberDAO();
             int cnt = dao.updateMember(update);
             
@@ -43,11 +45,11 @@ public class userUpdateCon extends HttpServlet {
                // 덮어쓰기
                session.setAttribute("loginMember", update);
                
-               response.sendRedirect("main.jsp");
+               response.sendRedirect("mypage.html");
             }else {
             // 아니라면~ (실패) --> update.jsp로 이동
                System.out.println("회원정보 수정 실패ㅜㅜ ");
-               response.sendRedirect("update.jsp");
+               response.sendRedirect("userupdate.jsp");
             }
             
          

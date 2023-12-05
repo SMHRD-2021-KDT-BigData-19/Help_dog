@@ -47,9 +47,15 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <br>
 	    <br>
 	    <div class="menulist">
+	      <b>이름</b>
+	
+	    <br>
+	    <textarea placeholder="이름을 입력해주세요" style="width: 100%; height: 60px;" name="pet_name"></textarea>
+	    <br>
+	    
 	       <b>동물 종류</b>
 	       <br>      
-	       <select style="width: 100%;" name="petType">
+	       <select style="width: 100%;" name="pet_type">
 	         
 	 		 <option>개</option>
 	          <option>고양이</option>
@@ -63,7 +69,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    
 	  
 	 <br>      
-	    <select style="width: 100%;" name="petGender">
+	    <select style="width: 100%;" name="pet_gubun">
 	       <option>암컷</option>
 	 	   <option>수컷</option>
 	    </select>
@@ -71,7 +77,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <br>
 	    <b>중성화 여부</b>
 	    <br>   
-	    <select style="width: 100%;" name="petNe">
+	    <select style="width: 100%;" name="pet_jungsung">
 	       <option>중성화완료</option>
 	       
 	     
@@ -84,14 +90,14 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <b>입양날짜(출생일)</b>
 	   
 	 <br>
-	 <input type="date" style="width: 100%;" name="petBirth">
+	 <input type="date" style="width: 100%;" name="pet_date">
 	    <br>
 	    <br>
 	    <b>특이사항</b>
 	    
 	    
 	 <br>
-	    <textarea placeholder="특이사항을 입력해주세요" style="width: 100%; height: 60px;" name="petSign"></textarea>
+	    <textarea placeholder="특이사항을 입력해주세요" style="width: 100%; height: 60px;" name="pet_etc"></textarea>
 	    <br>
 	    
 	    

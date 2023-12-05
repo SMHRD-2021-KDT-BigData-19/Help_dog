@@ -7,8 +7,9 @@ public class petMember {
 				private String petGender;
 				private String petNe;
 				private String petBirth;
+				private String petSign;
 
-				public petMember(String id,String petName, String petType, String petGender, String petNe, String petBirth) {
+			public petMember(String id,String petName, String petType, String petGender, String petNe, String petBirth,String petSign) {
 					super();
 					this.id = id;
 					this.petName = petName;
@@ -16,6 +17,7 @@ public class petMember {
 					this.petGender = petGender;
 					this.petNe = petNe;
 					this.petBirth = petBirth;
+					this.petSign = petSign;
 				}
 
 				public String getId() {
@@ -66,12 +68,21 @@ public class petMember {
 					this.petBirth = petBirth;
 				}
 
+				public String getPetSign() {
+					return petSign;
+				}
+
+				public void setPetSign(String petSign) {
+					this.petSign = petSign;
+				}
+
 				@Override
 				public String toString() {
 					return "petMember [id=" + id + ", petName=" + petName + ", petType=" + petType + ", petGender="
-							+ petGender + ", petNe=" + petNe + ", petBirth=" + petBirth + "]";
+							+ petGender + ", petNe=" + petNe + ", petBirth=" + petBirth + ", petSign=" + petSign + "]";
 				}
 
+				
 		
 		
 }

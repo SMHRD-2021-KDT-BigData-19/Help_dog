@@ -35,17 +35,15 @@
  </select>
  
    <update id="updateMember" parameterType="com.smhrd.domain.member_web" >
-        update user_info set  user_name=#{name}, user_pw=#{pw} user_hp=#{hp}, user_mail=#{mail}
-        where user_id=#{id}
+        update user_info set user_name=#{name}, user_pw=#{pw}, user_hp=#{hp}, user_mail=#{mail} where user_id=#{id}
      </update>
  
   <insert id="insertpet" parameterType="com.smhrd.domain.petMember">
     insert into pet_info values (#{petName},#{petType},#{petGender},#{petNe},#{petBirth})
- </insert>
+   </insert>
  
    <update id="updatePet" parameterType="com.smhrd.domain.petMember" >
-        update pet_info set pet_type=#{petType} , pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}
-        where user_id=#{id}
+        update pet_info set pet_type=#{petType} , pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth} where user_id=#{id}
      </update>
  
 </mapper>
