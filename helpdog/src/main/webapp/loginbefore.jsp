@@ -84,7 +84,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <div id="page-wrapper">
         <nav id="nav">
             <ul>
-                <li><a href="로그인 전.html" id="logo"> 🐶오래살개🐱</a></li>
+                <li><a href="loginbefore.html" id="logo"> 🐶오래살개🐱</a></li>
                 <li>
                     <a href="#">메뉴(Menu)</a>
                     <ul>
@@ -119,7 +119,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
     <section2 id="banner2">
         <div id="page-wrapper">
-            <a href="로그인.html" class="button">로그인</a>
+            <a href="login.html" class="button">로그인</a>
             <br><br>
             <a href="회원가입.html" class="button">회원가입</a>
         </div>

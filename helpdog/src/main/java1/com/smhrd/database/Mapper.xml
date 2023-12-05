@@ -34,6 +34,10 @@
     	select*from user_info where user_id = #{id} and user_pw =#{pw}
  </select>
  
+   <update id="updateMember" parameterType="com.smhrd.domain.member_web" >
+        update user_info set  user_name=#{name}, user_pw=#{pw} user_hp=#{hp}, user_mail=#{mail}
+        where user_id=#{id}
+     </update>
  
   <insert id="insertpet" parameterType="com.smhrd.domain.petMember">
     insert into pet_info values (#{petName},#{petType},#{petGender},#{petNe},#{petBirth})

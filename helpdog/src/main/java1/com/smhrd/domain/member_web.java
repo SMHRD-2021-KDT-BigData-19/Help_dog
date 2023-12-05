@@ -26,6 +26,15 @@ public class member_web {
 	}	// 로그인
 
 
+	public member_web(String pw, String name, String mail, String hp) {
+		super();
+		this.pw = pw;
+		this.name = name;
+		this.mail = mail;
+		this.hp = hp;
+	}  //회원정보 수정 
+
+
 	public String getId() {
 		return id;
 	}
