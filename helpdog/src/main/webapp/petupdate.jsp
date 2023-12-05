@@ -31,7 +31,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	               <li><a href="캘린더.html">캘린더(Calendar)</a></li>
 	               <li><a href="팁.html">팁(Tip)</a></li>
 	               <li>
-	                <a href="마이페이지.html">마이페이지</a>
+	                <a href="mypage.html">마이페이지</a>
 	                
 	            </li>
 	            <li><a href="loginbefore.jsp">로그아웃</a></li>
@@ -96,8 +96,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    
 	    
 	 <br>
-	    <input type="button" value="반려동물 추가하기" onclick="addInput();" />
-	    <input type="submit" value="제출하기">
+	    <button type="submit" name="sub" value="반려동물 추가하기">반려동물 추가하기</button>
+	    <button type="submit" name="sub" value="제출하기">제출하기</button>
 	 </div>
 	 </form>
       <!-- Scripts -->

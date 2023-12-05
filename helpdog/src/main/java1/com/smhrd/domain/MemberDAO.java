@@ -21,7 +21,7 @@ public class MemberDAO {
          // sqlSession.insert(Mapper.xml의 id값 ,매개변수)
          // mapper.xml 여러개 있는 경우에는 id입력하는 곳에
          // com.smhrd.database.Mapper.insertMember 라고 쓸 수 있음.
-         cnt = sqlSession.insert("insertMember",joinMember);
+         cnt = sqlSession.insert("insertMember", joinMember);
          // SQL문의 성공 여부에 따른 트랜잭션 관리 
          if(cnt>0) {
             sqlSession.commit();
@@ -57,7 +57,35 @@ public class MemberDAO {
 	   return loginMember;
    }
 
-		//반려동물 정보수정 
+   
+   //반려동물 정보 추가 
+   public int insertpet (petMember update) {
+	      int cnt = 0;
+	      try {
+	         // sqlSession.insert(Mapper.xml의 id값 ,매개변수)
+	         // mapper.xml 여러개 있는 경우에는 id입력하는 곳에
+	         // com.smhrd.database.Mapper.insertMember 라고 쓸 수 있음.
+	         cnt = sqlSession.insert("insertpet", update);
+	         // SQL문의 성공 여부에 따른 트랜잭션 관리 
+	         if(cnt>0) {
+	            sqlSession.commit();
+	         }else {
+	            sqlSession.rollback();
+	         }
+	      }catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         // 빌려온 연결고리 sqlSession객체 반납
+	         sqlSession.close();
+	      }
+	         
+	   
+	      return cnt;
+	      
+	   }// insertpet 끝
+
+	
+   //반려동물 정보수정 
 		public int updatePet(petMember update) {
 		    int cnt = 0;
 		    try {

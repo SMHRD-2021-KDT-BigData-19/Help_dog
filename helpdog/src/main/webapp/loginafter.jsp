@@ -104,7 +104,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 </li>
                 <li><a href="캘린더.html">캘린더(Calendar)</a></li>
                 <li><a href="팁.html">팁(Tip)</a></li>
-                <li id="dog"><a href="마이페이지.html">마이페이지</a></li>
+                <li id="dog"><a href="mypage.html">마이페이지</a></li>
                 <li><a href="loginbefore.jsp">로그아웃</a></li>
             </ul>
         </nav>

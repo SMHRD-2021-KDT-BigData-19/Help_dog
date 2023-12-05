@@ -2,14 +2,16 @@ package com.smhrd.domain;
 
 public class petMember {
 				private String id;
+				private String petName;
 				private String petType;
 				private String petGender;
 				private String petNe;
 				private String petBirth;
 
-				public petMember(String id, String petType, String petGender, String petNe, String petBirth) {
+				public petMember(String id,String petName, String petType, String petGender, String petNe, String petBirth) {
 					super();
 					this.id = id;
+					this.petName = petName;
 					this.petType = petType;
 					this.petGender = petGender;
 					this.petNe = petNe;
@@ -22,6 +24,14 @@ public class petMember {
 
 				public void setId(String id) {
 					this.id = id;
+				}
+
+				public String getPetName() {
+					return petName;
+				}
+
+				public void setPetName(String petName) {
+					this.petName = petName;
 				}
 
 				public String getPetType() {
@@ -58,9 +68,10 @@ public class petMember {
 
 				@Override
 				public String toString() {
-					return "petMember [id=" + id + ", petType=" + petType + ", petGender=" + petGender + ", petNe="
-							+ petNe + ", petBirth=" + petBirth + "]";
+					return "petMember [id=" + id + ", petName=" + petName + ", petType=" + petType + ", petGender="
+							+ petGender + ", petNe=" + petNe + ", petBirth=" + petBirth + "]";
 				}
 
+		
 		
 }
