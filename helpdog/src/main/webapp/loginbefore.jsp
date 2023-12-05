@@ -6,6 +6,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 		//세션에 저장되어있는 회원의 정보 가져오기
 		member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
+
 <html lang="en">
 
 <head>
@@ -76,15 +77,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         #footer a.button {
             margin-right: 30px;
         }
-        #score{
-            margin-left: 17%;
-            font-size: 50px;
-            color: rgb(207, 25, 25);
-        }
-        h1{
-            margin-left: 8%;
-            font-size: 50px;
-        }
     </style>
 </head>
 
@@ -104,28 +96,35 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 </li>
                 <li><a href="캘린더.html">캘린더(Calendar)</a></li>
                 <li><a href="팁.html">팁(Tip)</a></li>
-                <li id="dog"><a href="마이페이지.html">마이페이지</a></li>
-                <li><a href="loginbefore.jsp">로그아웃</a></li>
+
+             <!--    <li>
+                    <a href="마이페이지.html">마이페이지</a>
+                   
+                </li> -->
+
+
             </ul>
         </nav>
     </div>
-    <div>
-    <section class="page-wrapper">
-        <div class="container">
-            <div class="col-8 col-12-narrower">
-                <div id="content">
-                    <!-- Content -->
-                    <article>
-                        <header></header>
-                        <div style="text-align: left;">
-                            <!-- Large profile image -->
-                            <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
-                                <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
-                            </span>
-                        </div></section></article>
-                        <h1 id="score">46점</h1>
-                        <h1>멍멍멍이 건강상태</h1>
-                      
+
+    <section id="banner">
+        <h1 style="text-align: left;">오래살개</h1><br>
+        <h2 style="text-align: left;">대시보드를&nbsp; 이용한&nbsp; 반려동물&nbsp; 관련&nbsp; 웹사이트로<br>   
+            반려동물의&nbsp; 운동량&nbsp; /&nbsp; 식사량&nbsp; /&nbsp; 건강&nbsp; 정보에&nbsp; 대한<br>
+            시각화&nbsp; 정보를&nbsp; 제공하며,<br>
+            반려동물의&nbsp; 건강&nbsp; 관련&nbsp; 일정을&nbsp; 관리할&nbsp; 수&nbsp; 있는<br>
+            서비스를&nbsp; 제공합니다.
+        </h2>
+    </section>
+
+    <section2 id="banner2">
+        <div id="page-wrapper">
+            <a href="로그인.html" class="button">로그인</a>
+            <br><br>
+            <a href="회원가입.html" class="button">회원가입</a>
+        </div>
+    </section2>
+</div>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
