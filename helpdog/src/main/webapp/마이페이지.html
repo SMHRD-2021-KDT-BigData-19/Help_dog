@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>프로필 편집 - Arcana by HTML5 UP</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        /* Added styles for better positioning */
+        .profile-edit-container {
+            text-align: center;
+        }
+
+        .text-input {
+            width: 600px;
+            margin: auto;
+        }
+
+        .status-message {
+            width: 600px;
+            margin: auto;
+        }
+
+        .save-button {
+            margin-right: 32%;
+         margin-top: 10px;
+            float: right; /* Aligns the button to the right */
+        }
+
+        .edit-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+      .left-button {
+         float: left;
+         margin: 20px;
+      }
+
+      .right-button {
+         float: right;
+         margin: 20px;
+      }
+
+      .button-image {
+         max-width: 100px;
+      }
+
+    </style>
+   <script>
+      function openFileInput() {
+         // 프로필 이미지를 클릭했을 때 파일 선택 창 열기
+         document.getElementById('file-input').click();
+      }
+   
+      function displayImage(input) {
+         // 파일 선택 창에서 이미지를 선택한 경우 프로필 이미지 변경
+         if (input.files && input.files[0]) {
+            var reader = new FileReader();
+   
+            reader.onload = function (e) {
+               document.getElementById('profile-image').src = e.target.result;
+            };
+   
+            reader.readAsDataURL(input.files[0]);
+         }
+      }
+   </script>
+   
+</head>
+<body class="is-preload">
+   <!-- 파일 선택 input을 감추고, JavaScript에서 조작하기 위해 ID 부여 -->
+<input type="file" id="file-input" style="display: none;" onchange="displayImage(this)" />
+
+    <div id="page-wrapper">
+
+
+        <nav id="nav">
+            <ul>
+                <li><a href="로그인 전.html" id="logo"> 🐶오래살개🐱</a></li>
+                <li>
+                    <a href="#">메뉴(Menu)</a>
+                    <ul>
+                        <li></li>
+                        <li><a href="건강체크.html">건강 체크</a></li>
+                        <li><a href="식사량.html">식사량</a></li>
+                        <li><a href="운동량.html">운동량</a></li>
+                        <li><a href="영양제 체크.html">영양제 체크</a></li>
+                    </ul>
+                </li>
+                        <li><a href="캘린더.html">캘린더(Calendar)</a></li>
+                        <li><a href="팁.html">팁(Tip)</a></li>
+                        
+                        <li>
+                            <a href="마이페이지.html">마이페이지</a>
+                        
+                        </li>
+                        <li><a href="로그인 전.html">로그아웃</a></li>
+            </ul>
+        </nav>
+
+       </div>
+
+        <!-- Main -->
+        <section class="page-wrapper">
+            <div class="container">
+                <div class="col-8 col-12-narrower">
+                    <div id="content">
+                        <!-- Content -->
+                        <article>
+                            <header></header>
+                            <div style="text-align: center;">
+                                <!-- Large profile image -->
+                                <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
+                                    <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+                                </span>
+                            
+                                <!-- Small image next to the profile image -->
+                                <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
+                                    <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+                                </span>
+                            </div>
+
+                     <!-- 여기 주소 바꾸면 됨 -->
+                        <!-- 왼쪽 버튼 (이미지) -->
+                        <a href="왼쪽.html" class="left-button">
+                           <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
+                        </a>
+
+                        <!-- Centered image ... -->
+
+                        <!-- 오른쪽 버튼 (이미지) -->
+                        <a href="오른쪽.html" class="right-button">
+                           <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
+                        </a>
+
+                            <!-- Profile Edit text ... -->
+                            <p class="profile-edit-container" style="font-weight: bold; margin-top: 10px;">프로필 편집</p>
+                            <!-- Dog Name input box ... -->
+                            <div class="profile-edit-container">
+                                <input type="text" placeholder="강아지 이름을 입력해주세요;" class="text-input" style="width:500px">
+                            </div>
+                            <!-- Status Message text ... -->
+                            <p class="profile-edit-container" style="font-weight: bold; margin-top: 20px;">상태메세지</p>
+                            <!-- Text box for status message ... -->
+                            <div class="profile-edit-container">
+                                <textarea placeholder="내용을 입력해주세요." rows="4" class="status-message" style="width:500px"></textarea>
+                            </div>
+                            <!-- Save Button -->
+                            <div class="profile-edit-container">
+                                <button class="save-button">저장</button>
+                            </div>
+                     <br><br>
+                            <!-- Edit Buttons ... -->
+                            <div class="edit-buttons">
+                              <a href="개인정보수정.html">  <button>개인정보 수정</button></a>
+                              <a href="반려동물정보수정.html"><button>반려동물 정보 수정</button></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer ... -->
+
+    </div>
+<script>
+    function openFileInput(targetId) {
+        // 파일 선택 창을 여는 함수
+        document.getElementById('file-input').addEventListener('change', function () {
+            displayImage(this, targetId);
+        });
+
+        // 파일 선택 창 열기
+        document.getElementById('file-input').click();
+    }
+
+    function displayImage(input, targetId) {
+        // 파일 선택 창에서 이미지를 선택한 경우 프로필 이미지 변경
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                document.getElementById(targetId).src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
