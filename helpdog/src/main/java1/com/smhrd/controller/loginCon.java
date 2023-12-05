@@ -45,7 +45,7 @@ public class loginCon extends HttpServlet {
       }else {
     	  System.out.println("로그인 실패 ㅠㅠ ");
     	  // 로그인 실패하면 login.html로 이동
-    	  response.sendRedirect("로그인.html");
+    	  response.sendRedirect("login2.html");
       }
    }
 
