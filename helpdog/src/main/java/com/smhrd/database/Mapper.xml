@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace : sql태그 id를 그룹화하기 위한 속성
+                 mapper의 경로 작성
+  -->
+<mapper namespace="com.smhrd.database.Mapper">
+
+<!-- sql문을 태그 단위 정리 
+   resultType : sql문의 결과물 타입 : com.smhrd.model.memberVO, String, Int, ...
+   parameterType : sql문 돌려줄때 넣어줄 값 : com.smhrd.model.memberVO, Int, ...
+   바인드변수(?)와 같은 역할로 #{객체의 필드명}
+   주의할점~~~~) Mybatis는 객체의 필드명에 언더바(_)가 있으면 매칭을 못시킴. 대소문자로 구분해서 써라~
+   주의할점~~~~) 객체의 필드명 == 컬럼명 (일치시키면 매칭하기 쉬움)
+   주의할점~~~~) 안쓰는 sql태그는 삭제한다. (남아있는 것만으로도 오류 생성함)
+   주의할점~~~~) SQL문 적고 세미콜론 쓰지 않기! 
+            <select id = "selectMember"> 
+            select * from member_web id=#{id} 
+            </select> 라고 쓰기 
+-->
+ <insert id="insertMember" parameterType="com.smhrd.domain.member_info">
+    insert into member_info values (#{user_id},#{user_pw},#{user_name},#{user_hp},#{user_mail})
+ </insert>
+ 
+ <!--  member_web 객체에서 1개를 담든지, 2개를 담든지, 3개를 담든지
+ 		담아주는 객체의 형태는 같음
+ 		기존의 JDBCd에서는 select의 결과값 : ResultSet
+ 		여러개의 데이터를 돌려주는 SQL문이어도 객체 형태로 담음
+  -->
+
+ <!-- <select id="selectMember" parameterType="com.smhrd.domain.member_web" 
+    resultType="com.smhrd.domain.member_web">
+    	select*from member_web where id = #{id} and pw=#{pw}
+ </select> -->
+ 
+ 
+</mapper>
