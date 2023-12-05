@@ -28,20 +28,29 @@
             float: right; /* Aligns the button to the right */
         }
 
-        .edit-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-      .left-button {
-         float: left;
-         margin: 20px;
-      }
+		.edit-buttons {
+		    text-align: center; /* 가운데 정렬 */
+		    margin-right: 50px; /* 왼쪽으로 10px 이동 (원하는 크기로 조절) */
+		}
+		
+		.edit-buttons button {
+		    font-size: 16px; /* 원하는 크기로 조절하세요 */
+		    padding: 10px 20px; /* 버튼 패딩 조절 (상하좌우) */
+		}
 
-      .right-button {
-         float: right;
-         margin: 20px;
-      }
 
+		
+		.left-button {
+		    float: left;
+		    margin: 225px 10px 20px 0; /* Adjusted margin for spacing */
+		}
+		
+		.right-button {
+		    float: right;
+		    margin: 225px 0 20px 10px; /* Adjusted margin for spacing */
+		}
+		
+		
       .button-image {
          max-width: 100px;
       }
@@ -101,59 +110,41 @@
 
        </div>
 
-        <!-- Main -->
-        <section class="page-wrapper">
-            <div class="container">
-                <div class="col-8 col-12-narrower">
-                    <div id="content">
-                        <!-- Content -->
-                        <article>
-                            <header></header>
-                            <div style="text-align: center;">
-                                <!-- Large profile image -->
-                                <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
-                                    <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
-                                </span>
-                            
-                                <!-- Small image next to the profile image -->
-                                <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
-                                    <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
-                                </span>
-                            </div>
+				        <!-- Main -->
+				        <section class="page-wrapper">
+				            <div class="container">
+				                <div class="col-8 col-12-narrower">
+				                    <div id="content">
+				                        <!-- Content -->
+				                        <article>
+				                            <header></header>
+				<div style="text-align: center;">
+				    <!-- Left button (image) -->
+				    <a href="왼쪽.html" class="left-button">
+				        <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
+				    </a>
+				
+				    <!-- Large profile image -->
+				    <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
+				        <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 450px; height: 450px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+				    </span>
+				
+				    <!-- Small image next to the profile image -->
+				    <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
+				        <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+				    </span>
+				
+				    <!-- Right button (image) -->
+				    <a href="오른쪽.html" class="right-button">
+				        <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
+				    </a>
+				</div>
 
-                     <!-- 여기 주소 바꾸면 됨 -->
-                        <!-- 왼쪽 버튼 (이미지) -->
-                        <a href="왼쪽.html" class="left-button">
-                           <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
-                        </a>
 
-                        <!-- Centered image ... -->
 
-                        <!-- 오른쪽 버튼 (이미지) -->
-                        <a href="오른쪽.html" class="right-button">
-                           <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
-                        </a>
-
-                            <!-- Profile Edit text ... -->
-                            <p class="profile-edit-container" style="font-weight: bold; margin-top: 10px;">프로필 편집</p>
-                            <!-- Dog Name input box ... -->
-                            <div class="profile-edit-container">
-                                <input type="text" placeholder="강아지 이름을 입력해주세요;" class="text-input" style="width:500px">
-                            </div>
-                            <!-- Status Message text ... -->
-                            <p class="profile-edit-container" style="font-weight: bold; margin-top: 20px;">상태메세지</p>
-                            <!-- Text box for status message ... -->
-                            <div class="profile-edit-container">
-                                <textarea placeholder="내용을 입력해주세요." rows="4" class="status-message" style="width:500px"></textarea>
-                            </div>
-                            <!-- Save Button -->
-                            <div class="profile-edit-container">
-                                <button class="save-button">저장</button>
-                            </div>
-                     <br><br>
                             <!-- Edit Buttons ... -->
                             <div class="edit-buttons">
-                              <a href="개인정보수정.html">  <button>개인정보 수정</button></a>
+                              <a href="userUpdateCon.jsp">  <button>개인정보 수정</button></a>
                               <a href="petupdate.jsp"><button>반려동물 정보 수정</button></a>
                             </div>
                         </article>
