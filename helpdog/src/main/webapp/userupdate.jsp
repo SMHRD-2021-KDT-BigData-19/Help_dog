@@ -48,6 +48,13 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         <br>
         <br>
         <div class="menulist">
+        
+             <div style="position: relative;" >
+                <img src="images/이름 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
+                <textarea placeholder="변경할 이름을 입력해주세요" name="user_name" style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
+            </div>
+            <br>
+            <br>
             <div style="position: relative;" >
                 <img src="images/비밀번호 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
                 <textarea placeholder="변경할 비밀번호를 입력해주세요" name="user_pw" style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
