@@ -35,4 +35,9 @@
  </select>
  
  
+   <update id="updatePet" parameterType="com.smhrd.domain.Member" >
+        update pet_info set pet_type=#{petType} , pet_gubun=#{petGender}, pet_jungsung=#{petNe}
+        where user_id=#{id}
+     </update>
+ 
 </mapper>

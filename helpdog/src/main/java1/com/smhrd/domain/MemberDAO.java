@@ -56,4 +56,24 @@ public class MemberDAO {
 	   }
 	   return loginMember;
    }
-}
+
+		//반려동물 정보수정 
+		public int updatePet(petMember update) {
+		    int cnt = 0;
+		    try {
+		       cnt = sqlSession.insert("updatePet", update);             
+		       if(cnt>0) {
+		          sqlSession.commit();
+		       }else {
+		          sqlSession.rollback();
+		       }
+		 } catch (Exception e) {
+				 e.printStackTrace();
+				 }finally {
+				    sqlSession.close();
+				 }
+				   
+				    return cnt;
+				 
+				} // updatePet 끝
+				}
