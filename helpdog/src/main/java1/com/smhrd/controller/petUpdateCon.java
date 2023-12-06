@@ -20,7 +20,7 @@ public class petUpdateCon extends HttpServlet {
             // post방식 인코딩
             request.setCharacterEncoding("UTF-8");
             // 파라미터 수집
-            // session에서 email 가져오기
+            // session에서 ID 가져오기
             HttpSession session = request.getSession();
             member_web loginMember = (member_web)session.getAttribute("loginMember");
             
@@ -38,39 +38,24 @@ public class petUpdateCon extends HttpServlet {
       
       
             MemberDAO dao = new MemberDAO();
-            if(submit.equals("제출하기")) {
+            if(submit.equals("반려동물 추가하기")) {
             	// 수정하는 dao 메소드
-            	int cnt = dao.updatePet(update);
-                // cnt>0 (정보수정 성공) --> main.jsp로 이동
-                if(cnt>0) {
-                   // 세션에 저장되어있는 정보도 새로운 정보로 업데이트
-                   // 똑같은 이름의 세션에 값을 새로 또 저장
-                   // 덮어쓰기
-                   session.setAttribute("loginMember", update);
-                   response.sendRedirect("mypage.html");
-                }else {
-                // 아니라면~ (실패) --> update.jsp로 이동
-                   System.out.println("반려동물 정보 수정 실패ㅜㅜ ");
-                   response.sendRedirect("petupdate.jsp");
-                }
-            }else {
-            	// 새로 추가하는 dao 메소드
             	int cnt = dao.insertpet(update);
-            	// cnt>0 (정보수정 성공) --> main.jsp로 이동
+                // cnt>0 (반려동물 정보수정 성공) --> mypage.html로 이동
                 if(cnt>0) {
                    // 세션에 저장되어있는 정보도 새로운 정보로 업데이트
                    // 똑같은 이름의 세션에 값을 새로 또 저장
                    // 덮어쓰기
                    session.setAttribute("loginMember", update);
-                   
                    response.sendRedirect("mypage.html");
-                }else {
-                // 아니라면~ (실패) --> update.jsp로 이동
-                   System.out.println("반려동물 정보 추가 실패ㅜㅜ ");
+                	  System.out.println("추가 실패 ㅠㅠ ");
+            }else{
+            	// 새로 추가하는 dao 메소드            	
+            	cnt = dao.updatePet(update);
                    response.sendRedirect("petupdate.jsp");
-                }
+                	System.out.println("수정 실패 ㅠㅠ ");
             }
            
    }
-
+}
 }

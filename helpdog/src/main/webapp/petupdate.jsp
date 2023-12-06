@@ -6,7 +6,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 		//세션에 저장되어있는 회원의 정보 가져오기
 		member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
-
 <html>
 <head>
 	   <title>도와줄개</title>
@@ -94,8 +93,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <br>
 	    <br>
 	    <b>특이사항</b>
-	    
-	    
 	 <br>
 	    <textarea placeholder="특이사항을 입력해주세요" style="width: 100%; height: 60px;" name="pet_etc"></textarea>
 	    <br>
