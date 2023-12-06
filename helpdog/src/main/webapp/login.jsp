@@ -128,7 +128,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
             <nav id="nav">
                 <ul>
-                    <li><a href="로그인 전.jsp" id="logo"> 🐶오래살개🐱</a></li>
+                    <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
                     <li>
                         
                         <a href="#">메뉴(Menu)</a>

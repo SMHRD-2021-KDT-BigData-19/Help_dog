@@ -1,112 +1,34 @@
-<%@page import="com.smhrd.domain.member_web"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" 
-pageEncoding ="UTF-8"  isELIgnored ="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<!--
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-<head>
-    <title>오래살개 🐶 </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!-- FullCalendar 스크립트 및 스타일 추가 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-    <script src="index.global.js"></script>
-    <style>
-      
-        ul>li {
-            color: black;
-        }
-
-      #banner {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-            margin-bottom: 1em;
-         margin-top: 5em;
-         margin-right: 24em;
-        }
-
-      #banner>h1 {
-         font-size: 35px;
-            color: black;
-            margin-bottom: 0;
-           
-         margin-right: 500px;
-        }
-
-
-        #banner2 {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            padding: 1em;
-            flex: 1;
-            margin-top: -20em;
-         margin-right: 12em;
-        }
-
-
-
-        #banner h2 {
-            flex: 1;
-            margin-right: 18px;
-            font-size: 30px;
-            color: black;
-            font-weight: normal;
-        }
-
-        #footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-        }
-
-        #footer a {
-            margin: 10px 0;
-        }
-
-        #footer a.button {
-            margin-right: 30px;
-        }
-		
-    </style>
-</head>
-<body class="is-preload">
-    <div id="page-wrapper">
-        <nav id="nav">
+   <head>
+      <title>오래살개</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body class="is-preload">
+      <div id="page-wrapper">
+         <nav id="nav">
             <ul>
-                <li><a href="로그인 전.jsp" id="logo"> 🐶오래살개🐱</a></li>
+               <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
                 <li>
-                    <a href="#">메뉴(Menu)</a>
-                    <ul>
-                        <li><a href="건강체크.jsp">건강 체크</a></li>
-                        <li><a href="식사량.jsp">식사량</a></li>
-                        <li><a href="운동량.jsp">운동량</a></li>
-                        <li><a href="영양제 체크.jsp">영양제 체크</a></li>
-                    </ul>
-                </li>
-                <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
-                <li><a href="팁.jsp">팁(Tip)</a></li>
-                <li id="dog"><a href="마이페이지.jsp">마이페이지</a></li>
-                <li><a href="로그인 전.jsp">로그아웃</a></li>
+                  <a href="#">메뉴(Menu)</a>
+                  <ul>
+                     <li><a href="건강체크.jsp">건강 체크</a></li>
+                     <li><a href="식사량.jsp">식사량</a></li>
+                     <li><a href="운동량.jsp">운동량</a></li>
+                     <li><a href="영양제 체크.jsp">영양제 체크</a></li>
+                  </ul>
+               </li>
+               <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+               <li><a href="팁.jsp">팁(Tip)</a></li>
+               <li>
+                  <a href="mypage.jsp">마이페이지</a>
+               </li>
             </ul>
-        </nav>
-    </div>
+         </nav>
+      </div>
 
 
     <!-- Main -->
@@ -250,22 +172,13 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         });
     </script>
 
-    <style>
-        body {
-            margin: 40px 10px;
-            padding: 0;
-            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-            font-size: 14px;
-        }
-
-        #calendar {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .fc-toolbar {
-            width: 700px;
-        }
-    </style>
+    
+    <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/jquery.dropotron.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
 </body>
 </html>

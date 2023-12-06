@@ -98,7 +98,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 <li><a href="팁.jsp">팁(Tip)</a></li>
 
              <!--    <li>
-                    <a href="마이페이지.jsp">마이페이지</a>
+                    <a href="mypage.jsp">마이페이지</a>
                    
                 </li> -->
 

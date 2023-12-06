@@ -18,7 +18,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
    <div id="page-wrapper">
        <nav id="nav">
            <ul>
-            <li><a href="로그인 전.jsp" id="logo"> 🐶오래살개🐱</a></li>
+            <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
                 <li>
                    <a href="#">메뉴(Menu)</a>
                    <ul>
@@ -31,10 +31,10 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
                <li><a href="팁.jsp">팁(Tip)</a></li>
                <li>
-                <a href="마이페이지.jsp">마이페이지</a>
+                <a href="mypage.jsp">마이페이지</a>
                 
             </li>
-            <li><a href="로그인 전.jsp">로그아웃</a></li>
+            <li><a href="loginbefore.jsp">로그아웃</a></li>
                
             </li>
 
