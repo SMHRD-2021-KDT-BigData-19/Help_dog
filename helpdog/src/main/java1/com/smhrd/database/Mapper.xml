@@ -39,11 +39,11 @@
      </update>
  
   <insert id="insertpet" parameterType="com.smhrd.domain.petMember">
-    insert into pet_info values (#{id}, #{petName}, #{petType} , #{petGender}, #{petNe}, #{petBirth}, #{petSign})
+    insert into pet_info values (#{id}, #{petName}, #{petType}, #{petGender}, #{petNe}, #{petBirth}, #{petSign})
    </insert>
  
    <update id="updatePet" parameterType="com.smhrd.domain.petMember" >
-        update pet_info set pet_name=#{petName], pet_type=#{petType} , pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
-     </update>
+        update pet_info set pet_name=#{petName}, pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
+    </update>
  
 </mapper>
