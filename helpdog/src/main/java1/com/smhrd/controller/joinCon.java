@@ -42,9 +42,9 @@ public class joinCon extends HttpServlet {
       
       
       if(cnt>0) {
-         response.sendRedirect("joinSuccess.html");
+         response.sendRedirect("joinSuccess.jsp");
       }else {
-         response.sendRedirect("join.html");
+         response.sendRedirect("join.jsp");
       }
  // 위 아래 같은 식임!!!      
       

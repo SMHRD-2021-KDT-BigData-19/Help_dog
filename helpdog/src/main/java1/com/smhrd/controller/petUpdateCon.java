@@ -45,7 +45,7 @@ public class petUpdateCon extends HttpServlet {
                    // 똑같은 이름의 세션에 값을 새로 또 저장
                    // 덮어쓰기
                    session.setAttribute("loginMember", update);
-                   response.sendRedirect("mypage.html");
+                   response.sendRedirect("mypage.jsp");
                 	  System.out.println("추가 실패 ㅠㅠ ");
             }else{
             	// 새로 추가하는 dao 메소드            	

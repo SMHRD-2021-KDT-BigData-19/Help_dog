@@ -47,7 +47,7 @@ public class petInsertCon extends HttpServlet {
   	    	  // 덮어쓰기
             	session.setAttribute("loginMember", inputPet); 
             	System.out.println("반려동물 추가 성공ㅎㅎ");
-            	response.sendRedirect("mypage.html");
+            	response.sendRedirect("mypage.jsp");
   	      }else {
   	    	  System.out.println("반려동물 추가 실패 ㅠㅠ");
   	    	  response.sendRedirect("petinsert.jsp");
