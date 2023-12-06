@@ -78,7 +78,7 @@ public class MemberDAO {
    }//  update mamber  끝
    
    //반려동물 정보 추가 
-   public int insertpet (petMember inputPet) {
+   public int insertpet(petMember inputPet) {
 	      int cnt = 0;
 	      try {
 	         // sqlSession.insert(Mapper.xml의 id값 ,매개변수)
