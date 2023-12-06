@@ -21,7 +21,7 @@ public class loginCon extends HttpServlet {
       // 0. post방식 인코딩
       request.setCharacterEncoding("UTF-8");
       
-      // 1. 파라미터 수집(id,pw,nick)
+      // 1. 파라미터 수집(id,pw)
       String id = request.getParameter("user_id");
       String pw = request.getParameter("user_pw");
       
