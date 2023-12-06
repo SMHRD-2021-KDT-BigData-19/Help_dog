@@ -99,7 +99,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    
 	    
 	 <br>
-	    <button type="submit" value="추가하기">추가하기</button>
+	    <button type="submit" name="sub" value="추가하기">추가하기</button>
 	 </div>
 	 </form>
       <!-- Scripts -->

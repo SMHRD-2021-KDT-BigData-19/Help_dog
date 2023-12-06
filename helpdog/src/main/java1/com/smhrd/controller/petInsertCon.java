@@ -31,14 +31,16 @@ public class petInsertCon extends HttpServlet {
             String petNe = request.getParameter("pet_jungsung");
             String petBirth = request.getParameter("pet_date");
             String petSign = request.getParameter("pet_etc");
+            String submit = request.getParameter("sub");
             // Member 객체에 가져온 값을 담아주기
             petMember inputPet = new petMember(id, petName, petType, petGender, petNe, petBirth, petSign); 
             
             MemberDAO dao = new MemberDAO();
-            int cnt = dao.insertpet(inputPet);
-  	      
+          
+         if(submit.equals("추가하기")) {
             // cnt > 0 반려동물 추가 성공 --> .jsp 
             // 아니라면 ~ 실패했다면 --> update.jsp 
+        	  int cnt = dao.insertpet(inputPet);
             if(cnt>0) {
   	    	  // 세션에 저장되어있는 정보도 새로운 정보로 업데이트 
   	    	  // 똑같은 이름의 세션에 값을 새로 또 저장
@@ -53,4 +55,5 @@ public class petInsertCon extends HttpServlet {
   	      
   	}
 
-  }
+   }
+}
