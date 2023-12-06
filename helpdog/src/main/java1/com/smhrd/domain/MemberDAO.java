@@ -103,7 +103,23 @@ public class MemberDAO {
 	      
 	   }// insertpet 끝
 
-	
+ //반려동물 정보 수정
+   public petMember selectPet(petMember inputPet) {
+	   petMember choicePet = null;
+	   try {
+		   	// 여러 데이터 가져올 경우 : selectList(id값, 매개변수) -> List<VO>
+		   	//										.xml의 SQL태그에서 resultType에 List가 아니라 
+		   	//										VO형태로 반환
+			// 한개의 데이터 가져올 경우 : .selectOne(id값, 매개변수) -> VO
+		   inputPet=sqlSession.selectOne("selectPet", inputPet);
+		   }catch(Exception e ){
+			   e.printStackTrace();
+	   }finally {
+		   sqlSession.close();
+	   }
+	   return choicePet;
+   }
+ 
    //반려동물 정보수정 
 		public int updatePet(petMember update) {
 		    int cnt = 0;

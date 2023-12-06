@@ -71,7 +71,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     <br>
                     <div style="position: relative;">
                         <img src="images/이메일 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 30px; height: 20px;">
-                        <textarea placeholder="변경할 이메일을 입력해주세요"  value=" ${loginMember.mail}" name="user_mail" style="width: 360px; height: 40px; padding-left: 40px;"></textarea>
+                        <textarea placeholder="변경할 이메일을 입력해주세요"  name="user_mail" style="width: 360px; height: 40px; padding-left: 40px;"></textarea>
                     </div>
                     <br>
                     <br>
@@ -88,7 +88,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         <script src="assets/js/main.js"></script>
     </div>
     <script>
-    $(document).ready(function () {
+/*     $(document).ready(function () {
         $('form').submit(function () {
             // 여기에 폼 제출 로직을 추가하세요 (필요한 경우)
 
@@ -98,7 +98,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우)
             return false;
         });
-    });
+    }); */
 </script>
 </body>
 </html>

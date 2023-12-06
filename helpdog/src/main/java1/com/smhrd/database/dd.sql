@@ -1,1 +1,1 @@
-select * from PET_INFO
+select * from USER_INFO

@@ -44,7 +44,7 @@
    </insert>
  
  <!--저장된 pet 정보 불러오기 쿼리문-->
-  <select id="selectpet" parameterType="com.smhrd.domain.petMember" 
+  <select id="selectPet" parameterType="com.smhrd.domain.petMember" 
     resultType="com.smhrd.domain.petMember">
     	select*from pet_info where pet_name = #{petName}
  </select>

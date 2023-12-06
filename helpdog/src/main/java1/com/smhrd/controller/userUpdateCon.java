@@ -45,7 +45,7 @@ public class userUpdateCon extends HttpServlet {
                // 덮어쓰기
                session.setAttribute("loginMember", update);
                
-               response.sendRedirect("mypage.html");
+               response.sendRedirect("mypage.jsp");
             }else {
             // 아니라면~ (실패) --> update.jsp로 이동
                System.out.println("회원정보 수정 실패ㅜㅜ ");

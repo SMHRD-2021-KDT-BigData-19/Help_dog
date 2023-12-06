@@ -170,7 +170,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                
                 <br>
                 <button type="submit">로그인</button>
-                <button type="submit">회원가입</button>
+                <button type="button" onclick="window.location.href='회원가입.jsp'">회원가입</button>
+
             </form>
         </div>
 

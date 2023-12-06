@@ -9,6 +9,13 @@ public class petMember {
 				private String petBirth;
 				private String petSign;
 
+				
+			public petMember(String id, String petName) {
+					super();
+					this.id = id;
+					this.petName = petName;
+				}//selectpet할 객체
+
 			public petMember(String id,String petName, String petType, String petGender, String petNe, String petBirth,String petSign) {
 					super();
 					this.id = id;
