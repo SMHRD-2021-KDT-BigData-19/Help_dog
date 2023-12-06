@@ -94,17 +94,17 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     <a href="#">메뉴(Menu)</a>
                     <ul>
                         <li></li>
-                        <li><a href="건강체크.html">건강 체크</a></li>
-                        <li><a href="식사량.html">식사량</a></li>
-                        <li><a href="운동량.html">운동량</a></li>
-                        <li><a href="영양제 체크.html">영양제 체크</a></li>
+                        <li><a href="건강체크.jsp">건강 체크</a></li>
+                        <li><a href="식사량.jsp">식사량</a></li>
+                        <li><a href="운동량.jsp">운동량</a></li>
+                        <li><a href="영양제 체크.jsp">영양제 체크</a></li>
                     </ul>
                 </li>
-                        <li><a href="캘린더.html">캘린더(Calendar)</a></li>
-                        <li><a href="팁.html">팁(Tip)</a></li>
+                        <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+                        <li><a href="팁.jsp">팁(Tip)</a></li>
                         
                         <li>
-                            <a href="mypage.html">마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         
                         </li>
                         <li><a href="loginbefore.jsp">로그아웃</a></li>
@@ -123,7 +123,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 				                            <header></header>
 				<div style="text-align: center;">
 				    <!-- Left button (image) -->
-				    <a href="왼쪽.html" class="left-button">
+				    <a href="왼쪽.jsp" class="left-button">
 				        <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
 				    </a>
 				
@@ -138,7 +138,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 				    </span>
 				
 				    <!-- Right button (image) -->
-				    <a href="오른쪽.html" class="right-button">
+				    <a href="오른쪽.jsp" class="right-button">
 				        <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
 				    </a>
 				</div>

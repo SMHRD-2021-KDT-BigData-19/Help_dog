@@ -128,23 +128,23 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
             <nav id="nav">
                 <ul>
-                    <li><a href="로그인 전.html" id="logo"> 🐶오래살개🐱</a></li>
+                    <li><a href="로그인 전.jsp" id="logo"> 🐶오래살개🐱</a></li>
                     <li>
                         
                         <a href="#">메뉴(Menu)</a>
                         <ul>
                             <li></li>
-                            <li><a href="건강체크.html">건강 체크</a></li>
-                            <li><a href="식사량.html">식사량</a></li>
-                            <li><a href="운동량.html">운동량</a></li>
-                            <li><a href="영양제 체크.html">영양제 체크</a></li>
+                            <li><a href="건강체크.jsp">건강 체크</a></li>
+                            <li><a href="식사량.jsp">식사량</a></li>
+                            <li><a href="운동량.jsp">운동량</a></li>
+                            <li><a href="영양제 체크.jsp">영양제 체크</a></li>
                         </ul>
                     </li>
-                    <li><a href="캘린더.html">캘린더(Calendar)</a></li>
-                    <li><a href="팁.html">팁(Tip)</a></li>
-                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+                    <li><a href="팁.jsp">팁(Tip)</a></li>
+                    <li><a href="login.jsp">로그인</a></li>
                     <li>
-                        <a href="mypage.html">마이페이지</a>
+                        <a href="mypage.jsp">마이페이지</a>
                        
                     </li>
     
