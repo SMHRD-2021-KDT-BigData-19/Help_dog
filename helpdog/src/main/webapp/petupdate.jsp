@@ -128,7 +128,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             // 폼 제출 후 mypage.html로 리다이렉트
             window.location.href = 'mypage.html';
             
-            // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우)
+            // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우) 
             return false;
         });
     });
