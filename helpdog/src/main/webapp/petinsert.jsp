@@ -42,7 +42,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	   </div>
 	    <form action="petUpdateCon" method="post" >
 	   <div id="centersidebar" style="text-align: center;">
-	    <input type="button"  value="반려동물 추가">
+	    <input type="button"  value="반려동물 추가 페이지">
 	    <br>
 	    <br>
 	    <div class="menulist" >

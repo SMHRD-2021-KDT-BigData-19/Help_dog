@@ -12,6 +12,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	   <meta charset="utf-8" />
 	   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	   <link rel="stylesheet" href="assets/css/main.css" />
+	   
+	   
 </head>
 	<body class="is-preload">
 	   <div id="page-wrapper">
@@ -42,7 +44,14 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	   </div>
 	    <form action="petUpdateCon" method="post">
 	   <div id="centersidebar" style="text-align: center;">
-	    <input type="button"  value="반려동물 정보 수정">
+	    		<a href="userupdate.jsp">
+                    <button type="button">사용자 정보수정</button>
+                </a>
+                <a href="petupdate.jsp">
+                    <button type="button">반려동물 정보수정</button>
+                </a>
+               
+	    
 	    <br>
 	    <br>
 	    <div class="menulist">
@@ -99,8 +108,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    
 	    
 	 <br>
-	    <button type="submit" name="sub" value="반려동물 추가하기">반려동물 추가하기</button>
-	    <button type="submit" name="sub" value="제출하기">제출하기</button>
+	    
+	    <button type="submit" name="sub" value="저장하기">저장하기</button>
 	 </div>
 	 </form>
       <!-- Scripts -->
@@ -111,5 +120,18 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <script src="assets/js/util.js"></script>
          <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
          <script src="assets/js/main.js"></script>
+         <script>
+    $(document).ready(function () {
+        $('form').submit(function () {
+            // 여기에 폼 제출 로직을 추가하세요 (필요한 경우)
+
+            // 폼 제출 후 mypage.html로 리다이렉트
+            window.location.href = 'mypage.html';
+            
+            // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우)
+            return false;
+        });
+    });
+</script>
    </body>
 </html>
