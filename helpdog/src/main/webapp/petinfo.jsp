@@ -105,7 +105,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     
  <br>
     <input type="button" value="반려동물 추가하기" onclick="addInput();" />
-    <input type="submit" value="제출하기">
+    <input type="submit" value="저장하기">
  </div>
    <!-- Scripts -->
    <script src="assets/js/jquery.min.js"></script>

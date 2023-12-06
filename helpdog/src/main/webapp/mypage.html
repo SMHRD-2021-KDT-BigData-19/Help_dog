@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>프로필 편집 - Arcana by HTML5 UP</title>
+    <title>마이페이지</title>
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
@@ -144,8 +144,9 @@
 
                             <!-- Edit Buttons ... -->
                             <div class="edit-buttons">
-                              <a href="userupdate.jsp">  <button>개인정보 수정</button></a>
-                              <a href="petupdate.jsp"><button>반려동물 정보 수정</button></a>
+                              <a href="userupdate.jsp">  <button>사용자 / 반려동물<br>정보수정</button></a>
+                              <a href="petinsert.jsp">  <button>반려동물 추가하기</button></a>
+                              
                             </div>
                         </article>
                     </div>
@@ -164,7 +165,7 @@
         });
 
         // 파일 선택 창 열기
-        document.getElementById('file-input').click();
+        document.getElementById('file-input').click(); 
     }
 
     function displayImage(input, targetId) {
@@ -186,5 +187,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
