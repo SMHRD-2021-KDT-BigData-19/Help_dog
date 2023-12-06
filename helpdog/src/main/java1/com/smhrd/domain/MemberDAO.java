@@ -119,7 +119,6 @@ public class MemberDAO {
 				 }finally {
 				    sqlSession.close();
 				 }
-				   
 				    return cnt;
 				 
 				} // updatePet 끝

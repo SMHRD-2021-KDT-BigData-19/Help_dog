@@ -36,12 +36,20 @@
  
    <update id="updateMember" parameterType="com.smhrd.domain.member_web" >
         update user_info set user_name=#{name}, user_pw=#{pw}, user_hp=#{hp}, user_mail=#{mail} where user_id=#{id}
-     </update>
+   </update>
  
+ <!-- pet 추가하기 쿼리문-->
   <insert id="insertpet" parameterType="com.smhrd.domain.petMember">
     insert into pet_info values (#{id}, #{petName}, #{petType}, #{petGender}, #{petNe}, #{petBirth}, #{petSign})
    </insert>
  
+ <!--저장된 pet 정보 불러오기 쿼리문-->
+  <select id="selectpet" parameterType="com.smhrd.domain.petMember" 
+    resultType="com.smhrd.domain.petMember">
+    	select*from pet_info where pet_name = #{petName}
+ </select>
+ 
+ <!--저장된 pet 정보 수정하는 쿼리문-->
    <update id="updatePet" parameterType="com.smhrd.domain.petMember" >
         update pet_info set pet_name=#{petName}, pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
     </update>
