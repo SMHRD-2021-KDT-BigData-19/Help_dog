@@ -212,7 +212,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             </form>
         </div>
 
-    </div>
+    </div> 
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
