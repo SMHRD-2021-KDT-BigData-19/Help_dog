@@ -34,9 +34,7 @@ public class petUpdateCon extends HttpServlet {
             String submit = request.getParameter("sub");
             // Member 객체에 가져온 값을 담아주기
             petMember update = new petMember(id, petName, petType, petGender, petNe, petBirth, petSign); 
-            
-      
-      
+           
             MemberDAO dao = new MemberDAO();
             if(submit.equals("반려동물 추가하기")) {
             	// 수정하는 dao 메소드
