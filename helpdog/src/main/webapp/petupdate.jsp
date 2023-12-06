@@ -42,7 +42,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	           </ul>
 	       </nav>
 	   </div>
-	    <form action="petInsertCon" method="post">
+	    <form action="petUpdateCon" method="post">
 	   <div id="centersidebar" style="text-align: center;">
 	    		<a href="userupdate.jsp">
                     <button type="button">사용자 정보수정</button>
@@ -121,7 +121,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
          <script src="assets/js/main.js"></script>
          <script>
-    $(document).ready(function () {
+   /*  $(document).ready(function () {
         $('form').submit(function () {
             // 여기에 폼 제출 로직을 추가하세요 (필요한 경우)
 
@@ -131,7 +131,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우) 
             return false;
         });
-    });
+    }); */
 </script>
    </body>
 </html>
