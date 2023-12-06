@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.domain.member_web"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
+pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
@@ -165,7 +168,7 @@
         });
 
         // 파일 선택 창 열기
-        document.getElementById('file-input').click(); 
+        document.getElementById('file-input').click();
     }
 
     function displayImage(input, targetId) {
