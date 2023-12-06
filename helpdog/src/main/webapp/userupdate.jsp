@@ -42,7 +42,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
            </ul>
        </nav>
        <form action="userUpdateCon" method="post">
-       <div id="centersidebar" style="text-align: center;">
+       <div id="centersidebar" style="text-align: center; margin-left: 150px">
         <input type="button" value="사용자 정보 수정">
         <br>
         <br>
@@ -50,26 +50,27 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         <div class="menulist">
         
              <div style="position: relative;" >
-                <img src="images/이름 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
-                <textarea placeholder="변경할 이름을 입력해주세요" name="user_name"  style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
-            </div>
-            <br>
-            <br>
-            <div style="position: relative;" >
-                <img src="images/비밀번호 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
-                <textarea placeholder="변경할 비밀번호를 입력해주세요" name="user_pw"   style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
+                <img src="images/이름 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 30px; height: 20px;">
+                <textarea placeholder="변경할 이름을 입력해주세요" name="user_name"  style="width: 360px; height: 40px; padding-left: 40px;"></textarea>
             </div>
             <br>
             <br>
             <div style="position: relative;">
-                <img src="images/핸드폰 아이콘 .png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
-                <textarea placeholder="변경할 핸드폰번호를 입력해주세요"  name="user_hp"  style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
+    		<img src="images/비밀번호 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 30px; height: 20px;">
+    		<input type="password" id="userPassword" name="user_pw" placeholder="숫자로만 된 비밀번호를 입력해주세요" style="width: 360px; height: 40px; padding-left: 40px;" required>
+			</div>
+         
+            <br>
+            <br>
+            <div style="position: relative;">
+                <img src="images/핸드폰 아이콘 .png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 30px; height: 20px;">
+                <textarea placeholder="변경할 핸드폰번호를 입력해주세요"  name="user_hp"  style="width: 360px; height: 40px; padding-left: 40px;"></textarea>
             </div>
             <br>
             <br>
             <div style="position: relative;">
-                <img src="images/이메일 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 20px; height: 20px;">
-                <textarea placeholder="변경할 이메일을 입력해주세요"  value=" ${loginMember.mail}" name="user_mail" style="width: 340px; height: 40px; padding-left: 40px;"></textarea>
+                <img src="images/이메일 아이콘.png" alt="Icon" style="position: absolute; left: 10px; top: 10px; width: 30px; height: 20px;">
+                <textarea placeholder="변경할 이메일을 입력해주세요"  value=" ${loginMember.mail}" name="user_mail" style="width: 360px; height: 40px; padding-left: 40px;"></textarea>
             </div>
             <br>
             <br>
