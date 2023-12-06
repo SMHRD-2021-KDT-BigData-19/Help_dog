@@ -53,7 +53,7 @@ public class petUpdateCon extends HttpServlet {
             	// 새로 추가하는 dao 메소드            	
             	cnt = dao.updatePet(update);
                    response.sendRedirect("petupdate.jsp");
-                	System.out.println("수정 실패 ㅠㅠ ");
+                	System.out.println("수정 성공ㅠㅠ ");
             }
            
    }

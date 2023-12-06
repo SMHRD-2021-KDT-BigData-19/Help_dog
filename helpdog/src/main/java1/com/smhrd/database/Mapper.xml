@@ -39,7 +39,7 @@
      </update>
  
   <insert id="insertpet" parameterType="com.smhrd.domain.petMember">
-    insert into pet_info values (#{id}, #{petName}, #{petType}, #{petGender}, #{petNe}, #{petBirth}, #{petSign})
+    insert into pet_info values (#{petName}, #{petType}, #{petGender}, #{petNe}, #{petBirth}, #{petSign})
    </insert>
  
    <update id="updatePet" parameterType="com.smhrd.domain.petMember" >
