@@ -49,9 +49,9 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	      <b>이름</b>
 	
 	    <br>
-	    <textarea placeholder="이름을 입력해주세요" style="width: 500px; height: 60px;" name="pet_name" ></textarea>
+	    <textarea placeholder="이름을 입력해주세요." style="width: 500px; height: 60px;" name="pet_name" ></textarea>
 	    <br>
-	    
+	    <br>
 	       <b>동물 종류</b>
 	       <br>      
 	       <select style="width: 100%;" name="pet_type">
@@ -94,7 +94,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <br>
 	    <b>특이사항</b>
 	 <br>
-	    <textarea placeholder="특이사항을 입력해주세요" style="width: 100%; height: 60px;" name="pet_etc"></textarea>
+	    <textarea placeholder="특이사항을 입력해주세요." style="width: 100%; height: 60px;" name="pet_etc"></textarea>
 	    <br>
 	    
 	    
