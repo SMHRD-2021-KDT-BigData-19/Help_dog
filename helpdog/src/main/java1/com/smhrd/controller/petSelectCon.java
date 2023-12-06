@@ -34,22 +34,8 @@ public class petSelectCon extends HttpServlet {
             MemberDAO dao = new MemberDAO();
             petMember choicePet = dao.selectPet(inputPet); 
             
-
-                // cnt>0 (반려동물 정보수정 성공) --> mypage.html로 이동
-                if(cnt>0) {
-                   // 세션에 저장되어있는 정보도 새로운 정보로 업데이트
-                   // 똑같은 이름의 세션에 값을 새로 또 저장
-                   // 덮어쓰기
-                   session.setAttribute("loginMember", select);
-                   response.sendRedirect("mypage.html");
-                	  System.out.println("추가 실패 ㅠㅠ ");
-            }else{
-            	// 새로 추가하는 dao 메소드            	
-            	cnt = dao.updatePet(update);
-                   response.sendRedirect("petupdate.jsp");
-                	System.out.println("수정 성공ㅠㅠ ");
-            }
            
+
    }
 }
-}
+
