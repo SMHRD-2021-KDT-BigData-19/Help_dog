@@ -71,7 +71,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         <div id="content">
                               <h2> &nbsp; &nbsp; 건강 체크 - Daily Check</h2>
 
-                              <article class = "speech-bubble">   
+                              <article style="width: 70%; background-color:;">   
                               <div class="check">
                                  <label for="check"><b>사료를 남기지 않고 먹었나요?<input type="checkbox"></b> </label>
                                 </div>
