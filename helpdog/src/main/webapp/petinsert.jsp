@@ -27,7 +27,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	                       <li><a href="영양제 체크.jsp">영양제 체크</a></li>
 	                   </ul>
 	               </li>
-	               <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+	               <li><a href="Calendar.jsp">캘린더(Calendar)</a></li>
 	               <li><a href="팁.jsp">팁(Tip)</a></li>
 	               <li>
 	                <a href="mypage.jsp">마이페이지</a>
