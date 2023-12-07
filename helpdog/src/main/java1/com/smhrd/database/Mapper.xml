@@ -54,4 +54,6 @@
         update pet_info set pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
     </update>
  
+ 
+ <!--캘린더 정보 insert하는 쿼리문-->
 </mapper>

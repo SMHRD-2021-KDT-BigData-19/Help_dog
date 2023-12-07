@@ -1,1 +1,2 @@
-select * from calendar_info
+SELECT *
+  FROM SC_21K_BIGDATA_HACKSIM_2.CALENDAR_INFO

@@ -8,17 +8,13 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <link rel="stylesheet" href="assets/css/main.css" />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
 
     <style>
-    html,body{
-    		height:100%;
-    		margin: 0; 
-    }
-        	/* 캘린더 크기 조정 */
+         	/* 캘린더 크기 조정 */
         #calendar {
             width: 70%;
-            height: 100%;
+            height: 70%;
             overflow : hidden;
         }
 		  .fc-scrollgrid {
@@ -81,8 +77,8 @@
             예방접종/진료종류<br>
             <input type="text" id="schTitle" value=""><br>
             예방접종/진료 체크 여부: <br>
-             완료<input type="radio"  id="schYes" value=" "  name="check" checked />
-             아직<input type="radio" id="schNo" value=" " name="check" /><br>
+             완료<input type="radio"  id="schYes" value="Y"  name="check" checked />
+             아직<input type="radio" id="schNo" value="N" name="check" /><br>
             배경색<input type="color" id="schBColor" value="">
             글자색<input type="color" id="schFColor" value=""><br>
             <button onclick="fCalAdd()">추가</button>
@@ -91,7 +87,7 @@
     </div>
     <!-- 실제 화면을 담을 영역 -->
       <div id="Wrapper">
-       <div id='calendar' style="text-align:center; width:1500px; height: 100%; margin: 0 auto;"></div>
+       <div id='calendar' style="text-align:center; width:50%; height: 50%; margin: 0 auto;"></div>
     </div>
       <script>
         const YrModal = document.querySelector("#yrModal");
