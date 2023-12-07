@@ -1,11 +1,15 @@
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="com.smhrd.domain.MemberDAO"%>
 <%@page import="com.smhrd.domain.member_web"%>
+<%@page import="com.smhrd.domain.petMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%
-		//세션에 저장되어있는 회원의 정보 가져오기
-		member_web loginMember = (member_web)session.getAttribute("loginMember");
-%>
+
 <html lang="en">
 
 <head>
@@ -92,7 +96,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <div id="page-wrapper">
         <nav id="nav">
             <ul>
-                <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
+                <li><a href="loginafter.jsp" id="logo"> 🐶오래살개🐱</a></li>
                 <li>
                     <a href="#">메뉴(Menu)</a>
                     <ul>
@@ -118,14 +122,68 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     <article>
                         <header></header>
                         <div style="text-align: left;">
+                        <br>
                             <!-- Large profile image -->
                             <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
-                                <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+                                <img id="profile-image" src="images/멍멍멍이.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
                             </span>
                         </div></section></article>
                         <h1 id="score">46점</h1>
-                        <h1>멍멍멍이 건강상태</h1>
-                      
+                      <%
+    // 세션에 저장되어있는 회원의 정보 가져오기
+    member_web loginMember = (member_web)session.getAttribute("loginMember");
+
+    // JDBC 연결 설정
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1523:XE";
+    String username = "sc_21K_bigdata_hacksim_2";
+    String password = "smhrd2";
+
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    String petNameResult = "";
+
+    try {
+        // JDBC 드라이버 로드
+        Class.forName(driver);
+
+        // 데이터베이스 연결
+        conn = DriverManager.getConnection(url, username, password);
+
+        // 특정 petName 값으로 pet_info 테이블 검색
+        String query = "SELECT * FROM pet_info WHERE user_id = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, loginMember.getId());
+
+        // 쿼리 실행 및 결과 가져오기
+        rs = pstmt.executeQuery();
+        
+        // 결과 출력
+        if (rs.next()) {
+        	petNameResult = rs.getString("pet_name");
+
+            // 가져온 값들을 사용하여 출력하거나 다른 작업 수행
+            %><% // 가져온 값들을 사용하여 출력하거나 다른 작업 수행 %>
+<div style="text-align: center; margin-right: 50px; font-size: 35px; font-weight: bold;">
+    <h1 style="text-align:left"><%= petNameResult %>의 건강상태</h1>
+</div>
+
+<%
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        // 연결 해제
+        try {
+            if (rs != null) rs.close();
+            if (pstmt != null) pstmt.close();
+            if (conn != null) conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+%>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
