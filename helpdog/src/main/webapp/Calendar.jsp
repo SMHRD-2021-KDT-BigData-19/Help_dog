@@ -57,7 +57,7 @@
                      <li><a href="영양제 체크.jsp">영양제 체크</a></li>
                   </ul>
                </li>
-               <li><a href="Calendar.jsp">캘린더(Calendar)</a></li>
+               <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
                <li><a href="팁.jsp">팁(Tip)</a></li>
                <li>
                   <a href="mypage.jsp">마이페이지</a>
@@ -149,8 +149,12 @@
         calendar.on("eventAdd", info => console.log("Add:", info));
         calendar.on("eventChange", info => console.log("Change:", info));
         calendar.on("eventRemove", info => console.log("Remove:", info));
+        
         calendar.on("eventClick", info => {
             console.log("eClick:", info);
+            if (confirm("일정을 삭제하시겠습니까?")) {
+                info.event.remove(); // 이벤트 삭제
+            }
             console.log('Event: ', info.event.extendedProps);
             console.log('Coordinates: ', info.jsEvent);
             console.log('View: ', info.view);
@@ -187,10 +191,10 @@
                 start: mySchStart.value,
                 end: mySchEnd.value,
                 title: mySchTitle.value,
-                allDay: mySchAllday.checked,
                 backgroundColor: bColor,
                 textColor: fColor
             };
+            
 
             calendar.addEvent(event);
             fMClose();

@@ -64,24 +64,24 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
       </div>
 
          
-            <section class="wrapper style1">
+            <section class="wrapper style1" style="background-color: #f4f4f4">
                <div class="container">
                   <div class="row gtr-200">
                      <div class="col-8 col-12-narrower">
                         <div id="content">
                               <h2> &nbsp; &nbsp; 건강 체크 - Daily Check</h2>
 
-                              <article style="width: 70%; background-color:;">   
-                              <div class="check">
-                                 <label for="check"><b>사료를 남기지 않고 먹었나요?<input type="checkbox"></b> </label>
+                              <article style="width: 100%; background-color:rgba(244, 205, 142, 0.929)">   
+                              <div class="check" style="text-align:center">
+                                 <br><br>
+                                 <label for="check"><b>사료를 남기지 않고 먹었나요?     <input type="checkbox"></b> </label>
                                 </div>
+                                 <div class="check" style="text-align:center">
+                                    <label for="check"><b>대소변의 상태는 괜찮나요?     <input type="checkbox"></b> </label>
+                                  </div>
+                                  <br><br>
+                                 <br><br>
                               </article>
-
-                              <article class = "speech-bubble">   
-                                 <div class="check">
-                                    <label for="check"><b>대소변의 상태는 괜찮나요?<input type="checkbox"></b> </label>
-                                   </div>
-                                 </article>
    
    
 
