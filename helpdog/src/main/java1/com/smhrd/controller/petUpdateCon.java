@@ -25,35 +25,32 @@ public class petUpdateCon extends HttpServlet {
             member_web loginMember = (member_web)session.getAttribute("loginMember");
             
             String id = loginMember.getId();	
-            String petName = request.getParameter("pet_name");
+			/* String petName = request.getParameter("pet_name"); */
             String petType = request.getParameter("pet_type");
             String petGender = request.getParameter("pet_gubun");
             String petNe = request.getParameter("pet_jungsung");
             String petBirth = request.getParameter("pet_date");
             String petSign = request.getParameter("pet_etc");
-            String submit = request.getParameter("sub");
+            
             // Member 객체에 가져온 값을 담아주기
-            petMember update = new petMember(id, petName, petType, petGender, petNe, petBirth, petSign); 
+            petMember update = new petMember(id, petType, petGender, petNe, petBirth, petSign); 
            
             MemberDAO dao = new MemberDAO();
-            if(submit.equals("반려동물 추가하기")) {
-            	// 수정하는 dao 메소드
-            	int cnt = dao.insertpet(update);
+            	int cnt = dao.updatePet(update);
                 // cnt>0 (반려동물 정보수정 성공) --> mypage.html로 이동
                 if(cnt>0) {
                    // 세션에 저장되어있는 정보도 새로운 정보로 업데이트
                    // 똑같은 이름의 세션에 값을 새로 또 저장
                    // 덮어쓰기
-                   session.setAttribute("loginMember", update);
+                   //session.setAttribute("loginMember", update);
                    response.sendRedirect("mypage.jsp");
-                	  System.out.println("추가 실패 ㅠㅠ ");
+                	  System.out.println("변경 성공 ㅠㅠ ");
             }else{
             	// 새로 추가하는 dao 메소드            	
-            	cnt = dao.updatePet(update);
+            	System.out.println("변경 실패ㅠㅠ ");
                    response.sendRedirect("petupdate.jsp");
-                	System.out.println("수정 성공ㅠㅠ ");
             }
            
    }
 }
-}
+

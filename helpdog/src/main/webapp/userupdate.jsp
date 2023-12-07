@@ -39,11 +39,22 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             </ul>
         </nav>
         <form action="userUpdateCon" method="post">
+            
+            <%
+    // URL 파라미터에서 user_id와 pet_name 값을 가져옴
+    String user_id = request.getParameter("user_id");
+    String pet_name = request.getParameter("pet_name");
+
+    // 가져온 값 확인 (개발자 도구 콘솔에 출력)
+    out.println("user_id: " + user_id);
+    out.println("pet_name: " + pet_name);
+%>
+            
             <div id="centersidebar" style="text-align: center; margin-left: 150px">
-                <a href="userupdate.jsp">
+                <a href="userupdate.jsp?user_id=<%= loginMember.getId() %>&pet_name=<%= pet_name %>">
                     <button type="button">사용자 정보수정</button>
                 </a>
-                <a href="petupdate.jsp">
+                <a href="petupdate.jsp?user_id=<%= loginMember.getId() %>&pet_name=<%= pet_name %>">
                     <button type="button">반려동물 정보수정</button>
                 </a>
                 

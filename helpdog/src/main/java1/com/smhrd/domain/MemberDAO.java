@@ -104,14 +104,14 @@ public class MemberDAO {
 	   }// insertpet 끝
 
  //반려동물 정보 수정
-   public petMember selectPet(petMember inputPet) {
+   public petMember selectPet(String user_id) {
 	   petMember choicePet = null;
 	   try {
 		   	// 여러 데이터 가져올 경우 : selectList(id값, 매개변수) -> List<VO>
 		   	//										.xml의 SQL태그에서 resultType에 List가 아니라 
 		   	//										VO형태로 반환
 			// 한개의 데이터 가져올 경우 : .selectOne(id값, 매개변수) -> VO
-		   inputPet=sqlSession.selectOne("selectPet", inputPet);
+		   user_id=sqlSession.selectOne("selectPet", user_id);
 		   }catch(Exception e ){
 			   e.printStackTrace();
 	   }finally {

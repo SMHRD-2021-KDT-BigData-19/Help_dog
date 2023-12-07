@@ -40,18 +40,19 @@ public class petInsertCon extends HttpServlet {
          if(submit.equals("추가하기")) {
             // cnt > 0 반려동물 추가 성공 --> .jsp 
             // 아니라면 ~ 실패했다면 --> update.jsp 
+        	// MemberDAO의 insertpet 메서드가 올바르게 동작하고 영향 받은 행의 수를 반환한다고 가정합니다.
         	  int cnt = dao.insertpet(inputPet);
-            if(cnt>0) {
-  	    	  // 세션에 저장되어있는 정보도 새로운 정보로 업데이트 
-  	    	  // 똑같은 이름의 세션에 값을 새로 또 저장
-  	    	  // 덮어쓰기
-            	session.setAttribute("loginMember", inputPet); 
-            	System.out.println("반려동물 추가 성공ㅎㅎ");
-            	response.sendRedirect("mypage.jsp");
-  	      }else {
-  	    	  System.out.println("반려동물 추가 실패 ㅠㅠ");
-  	    	  response.sendRedirect("petinsert.jsp");
-  	      }    	
+
+        	  if (cnt > 0) {
+        	      // 세션을 새 정보로 업데이트
+        	      //session.setAttribute("newPet", inputPet);
+
+        	      System.out.println("반려동물 추가 성공ㅎㅎ");
+        	      response.sendRedirect("mypage.jsp");
+        	  } else {
+        	      System.out.println("반려동물 추가 실패 ㅠㅠ");
+        	      response.sendRedirect("petinsert.jsp");
+        	  }
   	      
   	}
 

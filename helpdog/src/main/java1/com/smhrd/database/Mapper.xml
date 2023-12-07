@@ -51,7 +51,7 @@
  
  <!--저장된 pet 정보 수정하는 쿼리문-->
    <update id="updatePet" parameterType="com.smhrd.domain.petMember" >
-        update pet_info set pet_name=#{petName}, pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
+        update pet_info set pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
     </update>
  
 </mapper>

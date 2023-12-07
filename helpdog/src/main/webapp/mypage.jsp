@@ -1,4 +1,11 @@
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="com.smhrd.domain.MemberDAO"%>
 <%@page import="com.smhrd.domain.member_web"%>
+<%@page import="com.smhrd.domain.petMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE HTML>
@@ -15,45 +22,36 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             text-align: center;
         }
 
-        .text-input {
-            width: 600px;
-            margin: auto;
-        }
-
-        .status-message {
-            width: 600px;
-            margin: auto;
-        }
-
         .save-button {
             margin-right: 32%;
          margin-top: 10px;
             float: right; /* Aligns the button to the right */
         }
 
-		.edit-buttons {
-		    text-align: center; /* 가운데 정렬 */
-		    margin-right: 50px; /* 왼쪽으로 10px 이동 (원하는 크기로 조절) */
-		}
-		
-		.edit-buttons button {
-		    font-size: 16px; /* 원하는 크기로 조절하세요 */
-		    padding: 10px 20px; /* 버튼 패딩 조절 (상하좌우) */
-		}
+      .edit-buttons {
+          text-align: center; /* 가운데 정렬 */
+          margin-right: 50px; /* 왼쪽으로 10px 이동 (원하는 크기로 조절) */
+      }
+      
+      .edit-buttons button {
+          font-size: 16px; /* 원하는 크기로 조절하세요 */
+          padding: 10px 20px; /* 버튼 패딩 조절 (상하좌우) */
+          width: 300px;
+      }
 
 
-		
-		.left-button {
-		    float: left;
-		    margin: 225px 10px 20px 0; /* Adjusted margin for spacing */
-		}
-		
-		.right-button {
-		    float: right;
-		    margin: 225px 0 20px 10px; /* Adjusted margin for spacing */
-		}
-		
-		
+      
+      .left-button {
+          float: left;
+          margin: 225px 10px 20px 0; /* Adjusted margin for spacing */
+      }
+      
+      .right-button {
+          float: right;
+          margin: 225px 0 20px 10px; /* Adjusted margin for spacing */
+      }
+      
+      
       .button-image {
          max-width: 100px;
       }
@@ -85,9 +83,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <input type="file" id="file-input" style="display: none;" onchange="displayImage(this)" />
 
     <div id="page-wrapper">
-
-
-        <nav id="nav">
+	 <nav id="nav">
             <ul>
                 <li><a href="loginafter.jsp" id="logo"> 🐶오래살개🐱</a></li>
                 <li>
@@ -101,8 +97,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     </ul>
                 </li>
                         <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
-                        <li><a href="팁.jsp">팁(Tip)</a></li>
-                        
+                        <li><a href="팁.jsp">팁(Tip)</a></li>                    
                         <li>
                             <a href="mypage.jsp">마이페이지</a>
                         
@@ -113,44 +108,110 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
        </div>
 
-				        <!-- Main -->
-				        <section class="page-wrapper">
-				            <div class="container">
-				                <div class="col-8 col-12-narrower">
-				                    <div id="content">
-				                        <!-- Content -->
-				                        <article>
-				                            <header></header>
-				<div style="text-align: center;">
-				    <!-- Left button (image) -->
-				    <a href="왼쪽.jsp" class="left-button">
-				        <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
-				    </a>
-				
-				    <!-- Large profile image -->
-				    <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
-				        <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 450px; height: 450px; cursor: pointer;" onclick="openFileInput('profile-image')" />
-				    </span>
-				
-				    <!-- Small image next to the profile image -->
-				    <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
-				        <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
-				    </span>
-				
-				    <!-- Right button (image) -->
-				    <a href="오른쪽.jsp" class="right-button">
-				        <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
-				    </a>
-				</div>
+            <div>
+                    <!-- Main -->
+                    <section class="page-wrapper">
+                        <div class="container">
+                            <div class="col-8 col-12-narrower">
+                                <div id="content">
+                                    <!-- Content -->
+                                    <article>
+                                        <header></header>
+                                        <br>
+            <div style="text-align: center;">
+                <!-- Left button (image) -->
+                <a href="왼쪽.jsp" class="left-button">
+                    <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
+                </a>
+            
+                <!-- Large profile image -->
+                <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
+                    <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 450px; height: 450px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+                </span>
+            
+                <!-- Small image next to the profile image -->
+                <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
+                    <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
+                </span>
+                <!-- Right button (image) -->
+                <a href="오른쪽.jsp" class="right-button">
+                    <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
+                </a>
+            </div>
+            </div>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.smhrd.domain.member_web" %>
+
+<%
+    // 세션에 저장되어있는 회원의 정보 가져오기
+    member_web loginMember = (member_web)session.getAttribute("loginMember");
+
+    // JDBC 연결 설정
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1523:XE";
+    String username = "sc_21K_bigdata_hacksim_2";
+    String password = "smhrd2";
+
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    String petNameResult = "";
+
+    try {
+        // JDBC 드라이버 로드
+        Class.forName(driver);
+
+        // 데이터베이스 연결
+        conn = DriverManager.getConnection(url, username, password);
+
+        // 특정 petName 값으로 pet_info 테이블 검색
+        String query = "SELECT * FROM pet_info WHERE user_id = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, loginMember.getId());
+
+        // 쿼리 실행 및 결과 가져오기
+        rs = pstmt.executeQuery();
+        
+        // 결과 출력
+        if (rs.next()) {
+        	petNameResult = rs.getString("pet_name");
+
+            // 가져온 값들을 사용하여 출력하거나 다른 작업 수행
+            %><% // 가져온 값들을 사용하여 출력하거나 다른 작업 수행 %>
+<div style="text-align: center; margin-right:50px; font-size: 35px; font-weight: bold;">
+    <%= petNameResult %>
+</div>
+<%
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        // 연결 해제
+        try {
+            if (rs != null) rs.close();
+            if (pstmt != null) pstmt.close();
+            if (conn != null) conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+%>
 
 
 
                             <!-- Edit Buttons ... -->
-                            <div class="edit-buttons">
-                              <a href="userupdate.jsp">  <button>사용자 / 반려동물<br>정보수정</button></a>
-                              <a href="petinsert.jsp">  <button>반려동물 추가하기</button></a>
-                              
-                            </div>
+
+							<br><br>
+							<div class="edit-buttons">
+							    <a href="userupdate.jsp?user_id=<%= loginMember.getId() %>">
+							        <button>사용자 / 반려동물정보수정</button>
+							    </a>
+							
+							    <a href="petinsert.jsp?user_id=<%= loginMember.getId() %>">
+							        <button>반려동물 추가하기</button>
+							    </a>
+							</div>
+					</div>
                         </article>
                     </div>
                 </div>

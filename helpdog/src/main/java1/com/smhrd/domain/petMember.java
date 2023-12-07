@@ -10,13 +10,8 @@ public class petMember {
 				private String petSign;
 
 				
-			public petMember(String id, String petName) {
-					super();
-					this.id = id;
-					this.petName = petName;
-				}//selectpet할 객체
-
-			public petMember(String id,String petName, String petType, String petGender, String petNe, String petBirth,String petSign) {
+			public petMember(String id, String petName, String petType, String petGender, String petNe,
+						String petBirth, String petSign) {
 					super();
 					this.id = id;
 					this.petName = petName;
@@ -27,6 +22,30 @@ public class petMember {
 					this.petSign = petSign;
 				}
 
+			public petMember(String id, String petName) {
+					super();
+					this.id = id;
+					this.petName = petName;
+				}//selectpet할 객체
+
+			public petMember(String id, String petType, String petGender, String petNe, String petBirth,String petSign) {
+					super();
+					this.id = id;
+					this.petType = petType;
+					this.petGender = petGender;
+					this.petNe = petNe;
+					this.petBirth = petBirth;
+					this.petSign = petSign;
+				}
+
+				public String getPetName() {
+				return petName;
+			}
+
+			public void setPetName(String petName) {
+				this.petName = petName;
+			}
+
 				public String getId() {
 					return id;
 				}
@@ -35,13 +54,13 @@ public class petMember {
 					this.id = id;
 				}
 
-				public String getPetName() {
-					return petName;
-				}
+				/*
+				 * public String getPetName() { return petName; }
+				 */
 
-				public void setPetName(String petName) {
-					this.petName = petName;
-				}
+				/*
+				 * public void setPetName(String petName) { this.petName = petName; }
+				 */
 
 				public String getPetType() {
 					return petType;
