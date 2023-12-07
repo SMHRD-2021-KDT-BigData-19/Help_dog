@@ -17,6 +17,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>도와줄개</title>
     <link rel="stylesheet" href="assets/css/main.css" />
+       <!-- chart.js 라이브러리 가져오는 script  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <style>
       
         ul>li {
@@ -184,14 +186,22 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         }
     }
 %>
-
+    <!-- chart.js 그래프 크기  -->
+    
+            <div id = "Chart"  >
+                <canvas id="myChart"  style="text-align:center; width:150%; height: 250%; margin: 0 auto;"></canvas>
+            </div>
+            
+    </div> 
+  
+    
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-   
+<script src="assets/js/식사량.js"></script>  
 </body>
 
 </html>

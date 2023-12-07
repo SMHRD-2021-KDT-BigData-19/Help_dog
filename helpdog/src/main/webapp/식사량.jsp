@@ -79,6 +79,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 </td>
             </tr>
         </div> 
+        
         <!-- chart.js 그래프 크기  -->
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
