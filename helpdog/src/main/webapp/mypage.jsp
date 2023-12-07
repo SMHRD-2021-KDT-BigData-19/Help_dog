@@ -119,10 +119,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                                         <header></header>
                                         <br>
             <div style="text-align: center;">
-                <!-- Left button (image) -->
-                <a href="왼쪽.jsp" class="left-button">
-                    <img src="images/왼쪽.png" alt="왼쪽 버튼" class="button-image">
-                </a>
+
             
                 <!-- Large profile image -->
                 <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
@@ -133,9 +130,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
                     <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
                 </span>
-                <!-- Right button (image) -->
-                <a href="오른쪽.jsp" class="right-button">
-                    <img src="images/오른쪽.png" alt="오른쪽 버튼" class="button-image">
+
                 </a>
             </div>
             </div>
@@ -211,6 +206,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 							        <button>반려동물 추가하기</button>
 							    </a>
 							</div>
+							<br><br>
 					</div>
                         </article>
                     </div>
