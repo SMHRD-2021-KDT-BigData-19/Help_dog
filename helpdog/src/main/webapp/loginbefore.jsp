@@ -77,6 +77,38 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         #footer a.button {
             margin-right: 30px;
         }
+        
+                        #nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: #333; /* Background color for sub-menu */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #37c0fb; /* Background color for sub-menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    list-style: none;
+        margin: 0; /* 변경된 부분: 여백을 없애기 위해 margin을 0으로 설정 */
+    padding: 0; /* 변경된 부분: 여백을 없애기 위해 padding을 0으로 설정 */
+}
+
+
+        #nav ul ul li {
+            margin-right: 0; 
+        }
+
+#nav ul ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    text-align: left; /* 변경된 부분: 가운데 정렬 */
+}
     </style>
 </head>
 

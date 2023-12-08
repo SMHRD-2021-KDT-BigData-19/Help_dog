@@ -53,15 +53,17 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     <section class="page-wrapper">
             			<div style="text-align: center;">
                     	<br><br>
-                    <button type="button"  href="userupdate.jsp" style="font-size: 20px;">사용자 정보수정</button> 
-                    <button type="button"  href="petupdate.jsp" style="font-size: 20px; ">반려동물 정보수정</button>
+                    <a href="userupdate.jsp">
+                    <button type="button"  style="font-size: 20px;">사용자 정보수정</button> 
+                    </a>
+                    <a href="petupdate.jsp">
+                    <button type="button"  style="font-size: 20px; ">반려동물 정보수정</button>
+                    </a>
             			</div>
             			<%
     // URL 파라미터에서 user_id와 pet_name 값을 가져옴
     String user_id = request.getParameter("user_id");
 
-    // 가져온 값 확인 (개발자 도구 콘솔에 출력)
-    out.println("user_id: " + user_id);
 %>
                 <br>
                 <br>
