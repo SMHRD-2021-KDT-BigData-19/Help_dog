@@ -45,9 +45,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     String user_id = request.getParameter("user_id");
     String pet_name = request.getParameter("pet_name");
 
-    // 가져온 값 확인 (개발자 도구 콘솔에 출력)
-    out.println("user_id: " + user_id);
-    out.println("pet_name: " + pet_name);
 %>
             
             <div id="centersidebar" style="text-align: center; margin-left: 150px">

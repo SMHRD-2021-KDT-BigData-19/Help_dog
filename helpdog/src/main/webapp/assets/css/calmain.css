@@ -327,6 +327,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   }
 .fc .fc-scroller-harness-liquid {
     height: 100%;
+    overflow: hidden;
   }
 .fc-direction-rtl .fc-scroller-harness > .fc-scroller { /* undo above hack */
     direction: rtl;
@@ -433,6 +434,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
 .fc .fc-col-header-cell-cushion {
     display: inline-block; /* x-browser for when sticky (when multi-tier header) */
     padding: 2px 4px;
+    color:black;
   }
 .fc .fc-bg-event,
   .fc .fc-non-business,
@@ -740,6 +742,7 @@ A HORIZONTAL event
     position: relative;
     z-index: 4;
     padding: 4px;
+    color:black;
   }
 .fc {
 
@@ -813,7 +816,7 @@ A HORIZONTAL event
 
 }
 .fc .fc-daygrid-day-bottom {
-    font-size: .85em;
+    font-size: .10px;
     margin: 2px 3px 0;
   }
 .fc .fc-daygrid-more-link {
@@ -1118,7 +1121,7 @@ A VERTICAL event
     flex-shrink: 0; /* allows text to expand how it normally would, regardless of constrained width */
   }
 .fc-direction-ltr .fc-timegrid-slot-label-frame {
-    text-align: right;
+    text-align: left;
   }
 .fc-direction-rtl .fc-timegrid-slot-label-frame {
     text-align: left;

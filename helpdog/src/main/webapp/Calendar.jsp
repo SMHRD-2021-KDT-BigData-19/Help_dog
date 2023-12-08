@@ -7,23 +7,25 @@
     <title>오래살개</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+          <link rel="stylesheet" href="assets/css/calmain.css" />
       <link rel="stylesheet" href="assets/css/main.css" />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
 
     <style>
-         	/* 캘린더 크기 조정 */
+            /* 캘린더 크기 조정 */
         #calendar {
+        	background-color : white;
             width: 70%;
             height: 70%;
             overflow : hidden;
         }
-		  .fc-scrollgrid {
-		    overflow: hidden !important;
-		  }
-		
-		  .fc-view-harness {
-		    overflow: hidden !important;
-		  }
+        .fc-scrollgrid {
+          overflow: hidden !important;
+        }
+      
+        .fc-view-harness {
+          overflow: hidden !important;
+        }
         #yrModal {
             position: fixed;
             width: 100%;
@@ -33,7 +35,7 @@
             z-index: 1000;
         }
         
-		/*일정 입력란 배경*/
+      /*일정 입력란 배경*/
         #cont {
             margin: 50px auto;
             width: 30%;
@@ -89,6 +91,12 @@
       <div id="Wrapper">
        <div id='calendar' style="text-align:center; width:50%; height: 50%; margin: 0 auto;"></div>
     </div>
+         <script src="assets/js/jquery.min.js"></script>
+         <script src="assets/js/jquery.dropotron.min.js"></script>
+         <script src="assets/js/browser.min.js"></script>
+         <script src="assets/js/breakpoints.min.js"></script>
+         <script src="assets/js/util.js"></script>
+         <script src="assets/js/main.js"></script>
       <script>
         const YrModal = document.querySelector("#yrModal");
         const calendarEl = document.querySelector('#calendar');
@@ -103,7 +111,7 @@
 
         //캘린더 헤더 옵션
         const headerToolbar = {
-        		 left: 'prevYear,prev,next,nextYear today',
+               left: 'prevYear,prev,next,nextYear today',
                  center: 'title',
                  right: 'dayGridMonth,dayGridWeek,timeGridDay'
         }
