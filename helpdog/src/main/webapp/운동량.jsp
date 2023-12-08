@@ -40,35 +40,21 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <!-- Main -->
       <div id ="sidebar"> 
          <h2>운동량</h2>
-            <div class="menulist">
-            <b>금일 운동 시간</b>
-            <br>      
-              <select>
-                <option>15분</option>
-                <option>30분</option>
-                <option>45분</option>
-                <option>1시간</option>
-              </select>
-            </div>
-            <br>
-				  <b>운동 종류</b>
-            <br>
-               <textarea placeholder="메뉴를 입력해주세요" style="width: 255px; height: 60px;"></textarea>
-				<br>
-            <br>
-            <b>운동 거리</b>
-            <br>
-            <textarea placeholder="이동거리를 입력해주세요" style="width: 300px; height: 60px;"></textarea>
-				<br>
-            <br>
-				<tr class="nomalTr">
-				   <td colspan ="2" align="center">
-					   <input type="submit" value="저장하기">  
-					  
-				   </td>
-				</tr>
-				
-		</div>
+     
+               <div>
+			    <label for="mealDateInput"><b>날짜:</b></label>
+			    <br>
+			    <input type="text" id="mealDateInput" placeholder="날짜를 입력하세요">
+			</div>
+			   <br>
+			<div>
+			    <label for="mealAmountInput"><b>금일 운동시간 (30~120분):</b></label>
+			    <br>
+			    <input type="text" id="mealAmountInput" placeholder="운동시간을 입력하세요">
+			</div>
+     			<br>
+				<button id="addMealButton">저장하기</button>
+	     	</div>
 
        <!-- chart.js 그래프 크기  -->
          

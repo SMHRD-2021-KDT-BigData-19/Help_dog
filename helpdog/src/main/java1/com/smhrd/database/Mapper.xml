@@ -55,5 +55,10 @@
     </update>
  
  
- <!--캘린더 정보 insert하는 쿼리문-->
+ <!--차트에 7일간의 정보를 가져오는 쿼리문-->
+ <select id="countSum" parameterType="com.smhrd.domain.GraphVO"
+    resultType="int">
+    	select sum))from pet_info where pet_name = #{petName}
+ </select>
 </mapper>
+ 

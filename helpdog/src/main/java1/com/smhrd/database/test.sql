@@ -1,2 +1,1 @@
-select * from calendar_info
-
+select sum(pos_count) as pos_sum from pethealth_info where user_id=#{vo.id} and pet_name={vo.petName} and inputDate between DATE_SUB(NOW(), INTERVAL #{num1}+7 DAY) and DATE_SUB(NOW(), INTERVAL #{num1} DAY) order by inputDate;  

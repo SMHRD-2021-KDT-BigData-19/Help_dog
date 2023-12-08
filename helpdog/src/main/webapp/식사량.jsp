@@ -60,30 +60,31 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         <option>건식</option>
                     </select>
               </div>
-    <br>
-             <div><b>금일 식사 메뉴</b>
              <br>
-             <textarea placeholder="내용을 입력해주세요" style="width: 255px; height: 60px;"></textarea>
-             </div>
-    <br>
-             <div><b>섭취량</b>
-                <br>
-                <textarea placeholder="금일 식사 제공 횟수" style="width: 255px; height: 60px;"></textarea>
-                </div>     
-                 <br>
-             
-            <tr class="nomalTr">
-                <td colspan="2" align="center">
-                    <input type="submit" value="저장하기">
-                </td>
-            </tr>
+             <div>
+			    <label for="mealDateInput"><b>날짜:</b></label>
+			    <br>
+			    <input type="text" id="mealDateInput" placeholder="날짜를 입력하세요">
+			</div>
+			   <br>
+			<div>
+			    <label for="mealAmountInput"><b>식사량:</b></label>
+			    <br>
+			    <input type="text" id="mealAmountInput" placeholder="식사량을 입력하세요">
+			</div>
+			   <br>
+			<button id="addMealButton">저장하기</button>
+            <br>
+            
         </div> 
         
         <!-- chart.js 그래프 크기  -->
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
             </div>
-         </div> 
+
+
+         </div>
     
 
 
