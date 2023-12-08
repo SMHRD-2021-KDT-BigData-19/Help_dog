@@ -6,7 +6,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <title>로그인</title>
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -128,23 +128,23 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
             <nav id="nav">
                 <ul>
-                    <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
+                    <li><a href="login.jsp" id="logo"> 🐶오래살개🐱</a></li>
                     <li>
                         
                         <a href="#">메뉴(Menu)</a>
                         <ul>
                             <li></li>
-                            <li><a href="건강체크.jsp">건강 체크</a></li>
-                            <li><a href="식사량.jsp">식사량</a></li>
-                            <li><a href="운동량.jsp">운동량</a></li>
-                            <li><a href="영양제 체크.jsp">영양제 체크</a></li>
+                            <li><a href="login.jsp">건강 체크</a></li>
+                            <li><a href="login.jsp">식사량</a></li>
+                            <li><a href="login.jsp">운동량</a></li>
+                            <li><a href="login.jsp">영양제 체크</a></li>
                         </ul>
                     </li>
-                    <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+                    <li><a href="login.jsp">캘린더(Calendar)</a></li>
                     <li><a href="팁.jsp">팁(Tip)</a></li>
                     <li><a href="login.jsp">로그인</a></li>
                     <li>
-                        <a href="mypage.jsp">마이페이지</a>
+                        <a href="login.jsp">마이페이지</a>
                        
                     </li>
     

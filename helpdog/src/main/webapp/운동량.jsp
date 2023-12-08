@@ -16,7 +16,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
       <div id="page-wrapper">
           <nav id="nav">
               <ul>
-               <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
+               <li><a href="loginafter.jsp" id="logo"> 🐶오래살개🐱</a></li>
                <li>
                       <a href="#">메뉴(Menu)</a>
                       <ul>
@@ -32,7 +32,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                      <a href="mypage.jsp">마이페이지</a>
                     
                  </li>
- 
+ 					<li><a href="loginbefore.jsp">로그아웃</a></li>
               </ul>
           </nav>
       </div>
