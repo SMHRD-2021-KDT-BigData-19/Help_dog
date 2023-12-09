@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data: {
             labels: initialLabels,
             datasets: [{
-                label: '운동량',
+                label: '운동시간',
                 fill: false,
                 data: initialData,
                 backgroundColor: ['rgba(255, 99, 132, 0.2)'],

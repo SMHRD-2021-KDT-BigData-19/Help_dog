@@ -821,12 +821,23 @@ input, select, textarea {
 	}
 
 	/*chart.js 부분*/
-	#Chart{
+	  #Chart{
 		position: absolute;
 		right: 300px;
 		top: 150px
 	}
 	
+	 #loginChart{
+		position: absolute;
+		right: 300px;
+		top: 150px
+	}
+	
+		#loginChart2{
+		position: absolute;
+		right: 300px;
+		top: 350px
+	}/* 예시로 상대적으로 아래에 위치하도록 조정 */
 	
 /* Dropotron */
 
