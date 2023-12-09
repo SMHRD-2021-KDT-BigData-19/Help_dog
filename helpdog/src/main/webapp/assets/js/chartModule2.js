@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var ctx = document.getElementById('login');
+    var ctx = document.getElementById('login2');
     
     // 여기에 날짜 형식을 변경하는 코드를 삽입합니다.
     var initialLabels = Array.from({ length: 7 }, (_, index) => {
@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         data: {
             labels: initialLabels,
             datasets: [{
-                label: '식사량',
+                label: '운동시간',
                 fill: false,
-                data: ['250','300','150','190','180','450','350'],
+                data: ['30','40','20','15','120','35','40'],
                 backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-                borderColor: ['rgba(255, 99, 132, 1)'],
+                borderColor: ['rgba(0, 0, 255, 1)'],
                 borderWidth: 1
             }]
         },
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
             scales: {
                 yAxes: [{
                     ticks: {
-                         min: 40,
-                        max: 750,
-                        stepSize: 100,
+                         min: 0,
+                        max: 120,
+                        stepSize: 10,
                         fontSize: 10,
                     }
                 }]

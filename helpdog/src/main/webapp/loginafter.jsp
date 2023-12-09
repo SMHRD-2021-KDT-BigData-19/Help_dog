@@ -187,17 +187,15 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     }
 %>
     <!-- chart.js 그래프 크기  -->
-             <figure>
-            <div id = "Chart"  >
-                <canvas id="myChart"  style="text-align:center; width:150%; height: 250%; margin: 0 auto;"></canvas>
+        
+            <div id = "loginChart" >
+            <canvas id="login" width="400" height="300"></canvas>
+            </div>    
+            <figure>
+           <div id = "loginChart2" >
+            <canvas id="login2" width="400" height="300"></canvas>
             </div>
-              </figure>
-              <br>
-               <figure>
-                <div id = "Chart2"  >
-                <canvas id="myChart"  style="text-align:center; width:150%; height: 250%; margin: 0 auto;"></canvas>
-            </div>
-              </figure>
+            </figure>
     </div> 
   
     
@@ -207,8 +205,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/식사량.js"></script>  
-<script src="assets/js/운동량.js"></script>  
+<script src="assets/js/chartModule.js"></script>  
+<script src="assets/js/chartModule2.js"></script> 
 </body>
 
 </html>

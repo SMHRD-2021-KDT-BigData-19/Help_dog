@@ -82,8 +82,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
             </div>
-
-
          </div>
     
 

@@ -54,11 +54,5 @@
         update pet_info set pet_type=#{petType}, pet_gubun=#{petGender}, pet_jungsung=#{petNe}, pet_date=#{petBirth}, pet_etc=#{petSign} where user_id=#{id}
     </update>
  
- 
- <!--차트에 7일간의 정보를 가져오는 쿼리문-->
- <select id="countSum" parameterType="com.smhrd.domain.GraphVO"
-    resultType="int">
-    	select sum))from pet_info where pet_name = #{petName}
- </select>
 </mapper>
  
