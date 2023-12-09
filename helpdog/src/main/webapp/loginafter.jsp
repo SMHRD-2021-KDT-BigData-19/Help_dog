@@ -193,7 +193,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             </div>    
         
            <div id = "loginChart2" >
-            <canvas id="login2" width="500" height="300"></canvas>
+            <canvas id="login2" width="500" height="250"></canvas>
             </div>
            
     </div> 
