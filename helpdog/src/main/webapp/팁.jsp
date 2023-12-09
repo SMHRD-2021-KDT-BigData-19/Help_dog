@@ -59,6 +59,34 @@
          text-align: center;
          margin-top: 10px;
       }
+      .container {
+         text-align: center;
+         margin-top: 20px;
+      }
+
+      .search-form {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+      }
+
+      .search-form input,
+      .search-form button {
+         margin-bottom: 0;
+      }
+      
+      .search-form button {
+   padding: 7px 7px; /* 또는 필요에 따라 조절한 여백 */
+   font-size: 12px; /* 또는 필요에 따라 조절한 글꼴 크기 */
+}
+
+      .search-form input {
+   width: 500px; /* 또는 필요에 따라 조절한 크기 */
+   padding: 10px; /* 또는 필요에 따라 조절한 여백 */
+   font-size: 16px; /* 또는 필요에 따라 조절한 글꼴 크기 */
+}
+</style>
    </style>
       
    <body class="is-preload">
@@ -81,6 +109,14 @@
                <li><a href="loginbefore.jsp">로그아웃</a></li>
             </ul>
          </nav>
+      </div>
+<div class="container">
+         <div class="row">
+            <form method="post" name="search" action="searchbbs.jsp" class="search-form">
+               <input type="text" class="form-control" placeholder="제목을 입력하세요." name="searchText" maxlength="100">
+               <button type="submit" class="btn btn-success">검색</button>
+            </form>
+         </div>
       </div>
 
       <!-- 이미지 코드 시작 -->
