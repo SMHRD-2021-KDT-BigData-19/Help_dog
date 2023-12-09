@@ -829,16 +829,15 @@ input, select, textarea {
 	
 	 #loginChart{
 		position: absolute;
-		right: 500px;
+		right: 300px;
 		top: 150px
 	}
 	
-		#loginChart2{
-		position: absolute;
-		right: 300px;
-		top: 500px
-	}/* 예시로 상대적으로 아래에 위치하도록 조정 */
-	
+	#loginChart2 {
+	  position: absolute;
+	  right: 300px;
+	  top: 500px;
+	}
 /* Dropotron */
 
 	.dropotron {
