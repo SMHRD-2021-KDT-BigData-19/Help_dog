@@ -42,26 +42,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <!-- Main --> 
         <div id ="sidebar">  
             <h2>식사량</h2>
-            <div class="check">
-                        <b>금일 식사 횟수</b>
-                    <br>
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-      <br>
-              <div class="menulist">
-                    <b>금일 식사종류</b>
-                    <br>
-                    <select>
-                        <option>습식</option>
-                        <option>건식</option>
-                    </select>
-              </div>
-             <br>
-             <div>
+            <div>
 			    <label for="mealDateInput"><b>날짜:</b></label>
 			    <br>
 			    <input type="text" id="mealDateInput" placeholder="날짜를 입력하세요">
