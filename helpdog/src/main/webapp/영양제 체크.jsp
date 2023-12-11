@@ -73,12 +73,12 @@
             <br>
             <h1>영양제 투약 기간 설정</h1>
             시작일 <br>
-            <input type="text" id="schStart" value=""><br><br>
+            <input type="text" id="schStart" value=""><br>
             종료일<br>
-             <input type="text" id="schEnd" value=""><br><br>
-<!--             예방접종/진료종류<br>
-            <input type="text" id="schTitle" value=""><br> -->
-            투약/섭취 체크 여부: <br><br>
+             <input type="text" id="schEnd" value=""><br>
+             영양제 이름<br>
+            <input type="text" id="schTitle" value=""><br>
+            투약/섭취 체크 여부: <br>
              1회<input type="radio" id="1count" value="N" name="check" />
              2회<input type="radio" id="2count" value="N" name="check" />
              3회<input type="radio" id="3count" value="N" name="check" />

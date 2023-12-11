@@ -15,7 +15,16 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <title>도와줄개</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      
+      #foot {
+            background-color: black;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            color: white;
+        }
         ul>li {
             color: black;
         }
@@ -139,9 +148,9 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         </nav>
     </div>
 
-    <section id="banner">
-        <h1 style="text-align: left;">오래살개</h1><br>
-        <h2 style="text-align: left;">대시보드를&nbsp; 이용한&nbsp; 반려동물&nbsp; 관련&nbsp; 웹사이트로<br>   
+    <section id="#" style="width:100%; height:100%; text-align:left; margin-left: 10%">
+        <h1 style="text-align: left; font-size:30px; margin-top:3%">오래살개</h1><br>
+        <h2 style="text-align: left; width: 50%">대시보드를&nbsp; 이용한&nbsp; 반려동물&nbsp; 관련&nbsp; 웹사이트로<br>   
             반려동물의&nbsp; 운동량&nbsp; /&nbsp; 식사량&nbsp; /&nbsp; 건강&nbsp; 정보에&nbsp; 대한<br>
             시각화&nbsp; 정보를&nbsp; 제공하며,<br>
             반려동물의&nbsp; 건강&nbsp; 관련&nbsp; 일정을&nbsp; 관리할&nbsp; 수&nbsp; 있는<br>
@@ -151,13 +160,12 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
     <section2 id="banner2">
         <div id="page-wrapper">
-            <a href="login.jsp" class="button">로그인</a>
+            <a href="login.jsp" class="button" style="margin-top:50%;">로그인</a>
             <br><br>
             <a href="회원가입.jsp" class="button">회원가입</a>
         </div>
     </section2>
 </div>
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
@@ -166,5 +174,19 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <script src="assets/js/main.js"></script>
    
 </body>
+<div id="foot" style="background-color:rgb(248, 187, 74); height:10%; width:100%;">
+	<a style="text-align:center; color: black;" href="#">
+	<br>
+	<b>이용약관</b>
+	<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+	</a>	
+	<a style="text-align:center; color: black;" href="#">
+	<b>개인정보처리방침</b>
+	<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+	</a>	
+		<a style="text-align:center; color: black;" href="#">
+	<b>고객센터</b>
+	</a>	
+</div>
 
 </html>
