@@ -104,7 +104,7 @@
                   </ul>
                </li>
                <li><a href="login.jsp">캘린더(Calendar)</a></li>
-               <li><a href="팁LoginX.jsp">팁(Tip)</a></li>
+               <li><a href="팁loginX.jsp">팁(Tip)</a></li>
                <li><a href="login.jsp">마이페이지</a></li>
                <li><a href="login.jsp">로그인</a></li>
             </ul>
@@ -258,7 +258,7 @@
    <b>개인정보처리방침</b>
    <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
    </a>   
-      <a style="text-align:center; color: black;" href="#"><!--  ㅇㅇㄹㅇㄹㅇㄹㄹㅇㅇㄹㅇㄹㅇㄹㄹ-->
+      <a style="text-align:center; color: black;" href="#">
    <b>고객센터</b>
    </a>  
 </div>
