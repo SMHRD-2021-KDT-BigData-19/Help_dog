@@ -38,35 +38,48 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
       </div>
     
  
-      
-         <!-- Main --> 
+       <!-- Main --> 
         <div id ="sidebar">  
             <h2>식사량</h2>
-            <div>
-			    <label for="mealDateInput"><b>날짜:</b></label>
-			    <br>
-			    <input type="text" id="mealDateInput" placeholder="날짜를 입력하세요">
-			</div>
-			   <br>
-			<div>
-			    <label for="mealAmountInput"><b>식사량:</b></label>
-			    <br>
-			    <input type="text" id="mealAmountInput" placeholder="식사량을 입력하세요">
-			</div>
-			   <br>
-			<button id="addMealButton">저장하기</button>
-            <br>
-            
+            <div class="check">
+                        <b>금일 식사 횟수</b>
+                    <br>
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+      <br>
+              <div class="menulist">
+                    <b>금일 식사종류</b>
+                    <br>
+                    <select>
+                        <option>습식</option>
+                        <option>건식</option>
+                    </select>
+              </div>
+    <br>
+             <div><b>금일 식사 메뉴</b>
+             <br>
+             <textarea placeholder="내용을 입력해주세요" style="width: 255px; height: 60px;"></textarea>
+             </div>
+    <br>
+             <div><b>섭취량</b>
+                <br>
+                <textarea placeholder="금일 식사 제공 횟수" style="width: 255px; height: 60px;"></textarea>
+                </div>     
+                 <br>    
+            <tr class="edit-buttons">
+                    <a href="식사량.jsp"><button>저장하기</button></a>
+            </tr>
         </div> 
-        
         <!-- chart.js 그래프 크기  -->
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
             </div>
-         </div>
-    
-
-
+         </div> 
+  
       <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
