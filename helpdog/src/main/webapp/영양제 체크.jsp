@@ -211,7 +211,7 @@
             fMClose();
         }
 
-        // 모달 닫기
+        // 모달 닫기ㄴ
         function fMClose() {
             YrModal.style.display = "none";
         }
