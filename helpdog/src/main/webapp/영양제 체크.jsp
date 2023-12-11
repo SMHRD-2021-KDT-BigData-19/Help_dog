@@ -22,7 +22,7 @@
         .fc-scrollgrid {
           overflow: hidden !important;
         }
-
+      
         .fc-view-harness {
           overflow: hidden !important;
         }
@@ -43,7 +43,6 @@
             background-color: rgb(255, 179, 179);
             color: white;
         }
-        
     </style>
 </head>
    <body class="is-preload">
@@ -72,38 +71,29 @@
     <div id="yrModal">
         <div id="cont" style="text-align: center;">
             <br>
-            <h1>일정을 입력해주세요</h1>
+            <h1>영양제 투약 기간 설정</h1>
             시작일 <br>
-            <input type="text" id="schStart" value=""><br>
+            <input type="text" id="schStart" value=""><br><br>
             종료일<br>
-             <input type="text" id="schEnd" value=""><br>
-            예방접종/진료종류<br>
-            <input type="text" id="schTitle" value=""><br>
-            예방접종/진료 체크 여부: <br>
-             완료<input type="radio"  id="schYes" value="Y"  name="check" checked />
-             아직<input type="radio" id="schNo" value="N" name="check" /><br>
+             <input type="text" id="schEnd" value=""><br><br>
+<!--             예방접종/진료종류<br>
+            <input type="text" id="schTitle" value=""><br> -->
+            투약/섭취 체크 여부: <br><br>
+             1회<input type="radio" id="1count" value="N" name="check" />
+             2회<input type="radio" id="2count" value="N" name="check" />
+             3회<input type="radio" id="3count" value="N" name="check" />
+             4회<input type="radio" id="4count" value="N" name="check" />
+             5회<input type="radio"  id="5count" value="Y"  name="check" checked /><br><br>
             배경색<input type="color" id="schBColor" value="">
-            글자색<input type="color" id="schFColor" value=""><br>
+            글자색<input type="color" id="schFColor" value=""><br><br>
             <button onclick="fCalAdd()">추가</button>
             <button onclick="fMClose()">닫기</button>
         </div>
     </div>
     <!-- 실제 화면을 담을 영역 -->
-      <section>
-
-		<div id='calendar' style=" float: left; text-align:center; width:52%; height: 50%; margin-left: 3%; margin-top: 3%; overflow: hidden"></div>
-
-      <span style="font-size: 15px; font-weight: bold;">
-      <br><br><br>
-
-      우측 캘린더의 날짜를 클릭 시 
-      <br>
-      영양제 투약 기간을 설정할 수 있습니다</span>
-
-
-
-    <br><br><br><br><br>
-      </section>
+      <div id="Wrapper">
+       <div id='calendar' style="text-align:center; width:50%; height: 50%; margin: 0 auto;"></div>
+    </div>
          <script src="assets/js/jquery.min.js"></script>
          <script src="assets/js/jquery.dropotron.min.js"></script>
          <script src="assets/js/browser.min.js"></script>
