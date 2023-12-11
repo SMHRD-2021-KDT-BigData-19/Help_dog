@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,23 +43,13 @@ public class joinCon extends HttpServlet {
       
       
       
-      if(cnt>0) {
-         response.sendRedirect("joinSuccess.jsp");
-      }else {
-         response.sendRedirect("join.jsp");
-      }
- // 위 아래 같은 식임!!!      
-      
-//      
-//      String res="";
-//      if(cnt>0) {
-//         res = "joinSuccess.html";
-//      }else {
-//         res= "join.html";
-//      }
-//      
-//      response.sendRedirect(res);
-//      
-   }
-
-}
+      if (cnt > 0) {
+          // Display popup upon successful registration
+          response.setContentType("text/html;charset=UTF-8");
+          PrintWriter out = response.getWriter();
+          out.println("<script>alert('회원가입이 완료되었습니다!'); window.location.href='login.jsp';</script>");
+       } else {
+          response.sendRedirect("join.jsp");
+       }
+    }
+ }
