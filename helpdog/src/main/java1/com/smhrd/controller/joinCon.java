@@ -47,9 +47,12 @@ public class joinCon extends HttpServlet {
           // Display popup upon successful registration
           response.setContentType("text/html;charset=UTF-8");
           PrintWriter out = response.getWriter();
-          out.println("<script>alert('회원가입이 완료되었습니다!'); window.location.href='login.jsp';</script>");
+          out.println("<script>alert('회원가입이 완료되었습니다!'); window.location.href='joinSuccess.jsp';</script>");
        } else {
-          response.sendRedirect("join.jsp");
+          // Display popup upon registration failure
+          response.setContentType("text/html;charset=UTF-8");
+          PrintWriter out = response.getWriter();
+          out.println("<script>alert('회원가입에 실패했습니다!'); window.location.href='회원가입.jsp';</script>");
        }
     }
  }
