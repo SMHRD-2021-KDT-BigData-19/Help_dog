@@ -1584,13 +1584,3 @@ input, select, textarea {
       font-size: 20px;
    }
  
-		#foot {
-            background-color: black;
-            height: 100px;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            text-align: center;
-            color: white;
-        }
