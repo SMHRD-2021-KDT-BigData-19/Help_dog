@@ -27,18 +27,19 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                           <li><a href="영양제 체크.jsp">영양제 체크</a></li>
                       </ul>
                   </li>
-                  <li><a href="Calendar.jsp">캘린더(Calendar)</a></li>
+                  <li><a href="Calendarjsp">캘린더(Calendar)</a></li>
                   <li><a href="팁.jsp">팁(Tip)</a></li>
                   <li>
                     <a href="mypage.jsp">마이페이지</a>
                 </li>
-					<li><a href="loginbefore.jsp">로그아웃</a></li>
+               <li><a href="loginbefore.jsp">로그아웃</a></li>
               </ul>
           </nav>
       </div>
     
  
-       <!-- Main --> 
+      
+         <!-- Main --> 
         <div id ="sidebar">  
             <h2>식사량</h2>
             <div class="check">
@@ -59,27 +60,29 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         <option>건식</option>
                     </select>
               </div>
-    <br>
-             <div><b>금일 식사 메뉴</b>
              <br>
-             <textarea placeholder="내용을 입력해주세요" style="width: 255px; height: 60px;"></textarea>
-             </div>
-    <br>
-             <div><b>섭취량</b>
-                <br>
-                <textarea placeholder="금일 식사 제공 횟수" style="width: 255px; height: 60px;"></textarea>
-                </div>     
-                 <br>    
-            <tr class="edit-buttons">
-                    <a href="식사량.jsp"><button>저장하기</button></a>
-            </tr>
+             <div>
+             <label for="mealDateInput"><b>날짜:</b></label>
+             <br>
+             <input type="text" id="mealDateInput" placeholder="날짜를 입력하세요">
+         </div>
+            <br>
+         <div>
+             <label for="mealAmountInput"><b>식사량:</b></label>
+             <br>
+             <input type="text" id="mealAmountInput" placeholder="식사량을 입력하세요">
+         </div>
+            <br>
+         <button id="addMealButton">저장하기</button>
+            <br>
+            
         </div> 
+        
         <!-- chart.js 그래프 크기  -->
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
             </div>
-         </div> 
-  
+
       <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -89,5 +92,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
       <script src="assets/js/main.js"></script>
       <script src="assets/js/식사량.js"></script>
    </body>
-
 </html>
