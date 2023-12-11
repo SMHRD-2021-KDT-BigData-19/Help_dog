@@ -93,7 +93,7 @@
       <div id="page-wrapper">
          <nav id="nav">
             <ul>
-               <li><a href="loginbefore.jsp" id="logo"> 🐶오래살개🐱</a></li>
+               <li><a href="loginafter.jsp" id="logo"> 🐶오래살개🐱</a></li>
                <li>
                   <a href="#">메뉴(Menu)</a>
                   <ul>
@@ -103,7 +103,7 @@
                      <li><a href="영양제 체크.jsp">영양제 체크</a></li>
                   </ul>
                </li>
-               <li><a href="캘린더.jsp">캘린더(Calendar)</a></li>
+               <li><a href="Calendar.jsp">캘린더(Calendar)</a></li>
                <li><a href="팁.jsp">팁(Tip)</a></li>
                <li><a href="mypage.jsp">마이페이지</a></li>
                <li><a href="loginbefore.jsp">로그아웃</a></li>
@@ -208,6 +208,12 @@
          <!-- 크롤링한 데이터가 여기에 표시될 것입니다. -->
       </div>
 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
       <script>
         // 가상으로 크롤링한 데이터
         const crawledData = [

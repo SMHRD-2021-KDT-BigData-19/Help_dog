@@ -141,7 +141,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         </ul>
                     </li>
                     <li><a href="login.jsp">캘린더(Calendar)</a></li>
-                    <li><a href="팁.jsp">팁(Tip)</a></li>
+                    <li><a href="팁LoginX.jsp">팁(Tip)</a></li>
                     <li><a href="login.jsp">로그인</a></li>
                     <li>
                         <a href="login.jsp">마이페이지</a>
