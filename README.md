@@ -6,6 +6,7 @@
 ## 1. 제작 기간 & 참여 인원
 - 2023년 11월 15일 ~ 12월 12일
 - 팀 프로젝트
+- 참여인원 : 5명
 
 </br>
 
@@ -186,6 +187,16 @@ public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
 </br>
 
 ## 6. 그 외 트러블 슈팅
+<details>
+<summary>마이페이지에서 사용자의 반려동물의 이름을 DB에서 불러오지 못함</summary>
+<div markdown="1">
+
+- 사용자가 로그인을 하게 되면 session에 user_id를 저장받고 user_id를 통해 db에서 pet_info 테이블로 접근하여 사용자의 반려동물 이름을 불러옴
+- `$ npm install —save-dev webpack-dev-server@3.0.0`
+
+</div>
+</details>
+
 <details>
 <summary>npm run dev 실행 오류</summary>
 <div markdown="1">
