@@ -12,7 +12,6 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
 
     <style>
-            /* 캘린더 크기 조정 */
         #calendar {
         	background-color : white;
             width: 70%;
@@ -35,7 +34,6 @@
             z-index: 1000;
         }
         
-      /*일정 입력란 배경*/
         #cont {
             margin: 50px auto;
             width: 30%;
@@ -67,7 +65,7 @@
             </ul>
          </nav>
       </div>
-    <!-- 모달은 메인 영역 밖으로 빼어 놓는게 좋음-->
+      
     <div id="yrModal">
         <div id="cont" style="text-align: center;">
             <br>
@@ -90,7 +88,7 @@
             <button onclick="fMClose()">닫기</button>
         </div>
     </div>
-    <!-- 실제 화면을 담을 영역 -->
+    
       <div id="Wrapper">
        <div id='calendar' style="text-align:center; width:50%; height: 50%; margin: 0 auto;"></div>
     </div>
@@ -112,51 +110,34 @@
         const mySchBColor = document.querySelector("#schBColor");
         const mySchFColor = document.querySelector("#schFColor");
 
-        //캘린더 헤더 옵션
         const headerToolbar = {
                left: 'prevYear,prev,next,nextYear today',
                  center: 'title',
                  right: 'dayGridMonth,dayGridWeek,timeGridDay'
         }
 
-        // 캘린더 생성 옵션(참공)
         const calendarOption = {
-            height: '700px', // calendar 높이 설정
-            expandRows: true, // 화면에 맞게 높이 재설정
-            slotMinTime: '09:00', // Day 캘린더 시작 시간
-            slotMaxTime: '18:00', // Day 캘린더 종료 시간
-            // 맨 위 헤더 지정
-           // headerToolbar: headerToolbar,
-            initialView: 'dayGridMonth',  // default: dayGridMonth 'dayGridWeek', 'timeGridDay', 'listWeek'
-            locale: 'kr',        // 언어 설정
-            selectable: true,    // 영역 선택
-            selectMirror: false,  // 오직 TimeGrid view에만 적용됨, default false
-            navLinks: false,      // 날짜,WeekNumber 클릭 여부, default false
-            weekNumbers: false,   // WeekNumber 출력여부, default false
-            editable: true,      // event(일정) 
-            /* 시작일 및 기간 수정가능여부
-            eventStartEditable: false,
-            eventDurationEditable: true,
-            */
-            dayMaxEventRows: true,  // Row 높이보다 많으면 +숫자 more 링크 보임!
-            /*
-            views: {
-                dayGridMonth: {
-                    dayMaxEventRows: 3
-                }
-            },
-            */
+            height: '700px',
+            expandRows: true,
+            slotMinTime: '09:00',
+            slotMaxTime: '18:00',
+            initialView: 'dayGridMonth',
+            locale: 'kr',
+            selectable: true,
+            selectMirror: false,
+            navLinks: false,
+            weekNumbers: false,
+            editable: true,
+
+            dayMaxEventRows: true,
             nowIndicator: true,
-            //events:[],
    
         }
 
-        // 캘린더 생성
         const calendar = new FullCalendar.Calendar(calendarEl, calendarOption);
-        // 캘린더 그리기
+        
         calendar.render();
 
-        // 캘린더 이벤트 등록
         calendar.on("eventAdd", info => console.log("Add:", info));
         calendar.on("eventChange", info => console.log("Change:", info));
         calendar.on("eventRemove", info => console.log("Remove:", info));
@@ -164,12 +145,12 @@
         calendar.on("eventClick", info => {
             console.log("eClick:", info);
             if (confirm("일정을 삭제하시겠습니까?")) {
-                info.event.remove(); // 이벤트 삭제
+                info.event.remove();
             }
             console.log('Event: ', info.event.extendedProps);
             console.log('Coordinates: ', info.jsEvent);
             console.log('View: ', info.view);
-            // 재미로 그냥 보더색 바꾸깅
+
             info.el.style.borderColor = 'red';
         });
         calendar.on("eventMouseEnter", info => console.log("eEnter:", info));
@@ -184,7 +165,6 @@
             YrModal.style.display = "block";
         });
 
-        // 일정(이벤트) 추가하깅
         function fCalAdd() {
             if (!mySchTitle.value) {
                 alert("*예방접종/진료종류 입력해주세요*")
@@ -211,12 +191,10 @@
             fMClose();
         }
 
-        // 모달 닫기ㄴ
         function fMClose() {
             YrModal.style.display = "none";
         }
        
     </script>
 </body>
-
 </html>

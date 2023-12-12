@@ -13,15 +13,14 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <style>
   .cola,
   .cyder {
-    width: 45%; /* Adjust the width as needed */
+    width: 45%;
     height: 300px;
     background-color: rgba(244, 205, 142, 0.929);
     margin: 20px;
     display: inline-block;
-    vertical-align: top; /* Align to the top */
-    box-sizing: border-box; /* Include padding and border in the width */
+    vertical-align: top;
+    box-sizing: border-box;
   
-
   .cola,
   .cyder {
     width: 45%;
@@ -29,21 +28,13 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     background-color: rgba(244, 205, 142, 0.929);
     margin: 20px;
     display: inline-block;
-    vertical-align: top; /* Align to the top */
-    box-sizing: border-box; /* Include padding and border in the width */
-    text-align: center; /* 가운데 정렬 추가 */
+    vertical-align: top;
+    box-sizing: border-box;
+    text-align: center;
   }
-
-
-
 </style>
 
-
-
-
-
-
-   </head>
+</head>
    <body class="is-preload">
       <div id="page-wrapper">
          <nav id="nav">
@@ -66,7 +57,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                    <li><a href="loginbefore.jsp">로그아웃</a></li>
                   </ul>
                </li>
-   
             </ul>
          </nav>
       </div>
@@ -122,10 +112,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 
                                       </div>
                                     </article>
-   
-   
-
-
                                     
                                  <article class="cola" style="width: 45%; height: 300px; background-color:rgba(244, 205, 142, 0.929); text-align:center">   
                                     <div class="check">
@@ -164,9 +150,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                                              <label for="check"><b>염증이 생겼거나 피가 나지는 않나요?<input type="checkbox"></b> </label><br><br>
                                             </div>
                                           </article>
-
             </section>
-
 		
          <script src="assets/js/jquery.min.js"></script>
          <script src="assets/js/jquery.dropotron.min.js"></script>

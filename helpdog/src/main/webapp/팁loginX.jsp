@@ -77,14 +77,14 @@
       }
       
       .search-form button {
-   padding: 7px 7px; /* 또는 필요에 따라 조절한 여백 */
-   font-size: 12px; /* 또는 필요에 따라 조절한 글꼴 크기 */
+   padding: 7px 7px;
+   font-size: 12px;
 }
 
       .search-form input {
-   width: 500px; /* 또는 필요에 따라 조절한 크기 */
-   padding: 10px; /* 또는 필요에 따라 조절한 여백 */
-   font-size: 16px; /* 또는 필요에 따라 조절한 글꼴 크기 */
+   width: 500px;
+   padding: 10px;
+   font-size: 16px;
 }
 </style>
    </style>
@@ -119,7 +119,6 @@
          </div>
       </div>
 
-      <!-- 이미지 코드 시작 -->
       <div id="image-container" onclick="window.location.href='https://mypetlife.co.kr/133737/'">
          <figure>
             <a href="#" ID="crawlImage">
@@ -201,12 +200,8 @@
             <figcaption>강아지 털갈이 시기 및 관리법</figcaption>
          </figure>
       </div>
-      
-      <!-- 이미지 코드 끝 -->
 
-      <div id="data-container" style="display:none;">
-         <!-- 크롤링한 데이터가 여기에 표시될 것입니다. -->
-      </div>
+      <div id="data-container" style="display:none;"></div>
     
       <script src="assets/js/jquery.min.js"></script>
        <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -215,7 +210,6 @@
        <script src="assets/js/util.js"></script>
        <script src="assets/js/main.js"></script>
       <script>
-        // 가상으로 크롤링한 데이터
         const crawledData = [
             { title: '강아지 건강검진 해야 하는 이유 – 주기, 항목, 비용 알아보기', content: 'https://mypetlife.co.kr/133737/' },
             { title: '강아지 생식 식단의 탄생, 이점과 위험성 알아보기', content: 'https://mypetlife.co.kr/15262/' },
@@ -227,8 +221,6 @@
             { title: '강아지 배 먹어도 되나요? 주의사항은?', content: 'https://mypetlife.co.kr/107193/' },
             { title: '강아지 털갈이 시기 및 관리법', content: 'https://mypetlife.co.kr/42331/' },
         ];
-
-        // 데이터를 HTML에 삽입하는 함수
         function displayData(index) {
             const container = document.getElementById('data-container');
             container.innerHTML = '';
@@ -237,16 +229,10 @@
             const card = document.createElement('div');
             card.innerHTML = `<a href="${item.content}" target="_blank"><h2>${item.title}</h2></a>`;
             container.appendChild(card);
-            
-            // 데이터 표시 후 data-container를 보이도록 변경
             container.style.display = 'block';
         }
-
-     // 이미지 클릭 시 데이터 표시
         document.getElementById('crawlImage').addEventListener('click', function () {
-            // 이미지 제목 숨기기
             document.querySelector('#image-container fig)
-                  </script>
+         </script>
    </body>
-
 </html>

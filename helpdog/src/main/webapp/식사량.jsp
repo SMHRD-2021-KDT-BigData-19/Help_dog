@@ -78,12 +78,10 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             
         </div> 
         
-        <!-- chart.js 그래프 크기  -->
             <div id = "Chart">
                 <canvas id="myChart" width="500" height="500"></canvas>
             </div>
 
-      <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
       <script src="assets/js/browser.min.js"></script>
