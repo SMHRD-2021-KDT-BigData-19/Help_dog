@@ -156,7 +156,10 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
 <div markdown="1">
 
 - 사용자가 로그인을 하게 되면 session에 user_id를 저장받고 user_id를 통해 db에서 pet_info 테이블로 접근하여 사용자의 반려동물 이름을 불러옴
-- `$ npm install —save-dev webpack-dev-server@3.0.0`
+
+
+<summary><b>개선된 코드</b></summary>
+<div markdown="1">
 
 </div>
 </details>
