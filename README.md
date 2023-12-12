@@ -149,7 +149,8 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
 
 </br>
 
-## 6. 그 외 트러블 슈팅
+### 5.2. 마이페이지에서 사용자의 반려동물의 이름을 DB에서 못 불러오는 문제
+
 <details>
 <summary>마이페이지에서 사용자의 반려동물의 이름을 DB에서 불러오지 못함</summary>
 <div markdown="1">
