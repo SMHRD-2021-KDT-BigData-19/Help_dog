@@ -106,14 +106,9 @@
 
 ~~~java
 /**
- * 게시물 Top10 (기준: 댓글 수 + 좋아요 수)
- * @return 인기순 상위 10개 게시물
+ * 회원가입 실패시 해당 페이지로 재접속 
  */
-public Page<PostResponseDto> listTopTen() {
-
-    PageRequest pageRequest = PageRequest.of(0, 10, Sort.Direction.DESC, "rankPoint", "likeCnt");
-    return postRepository.findAll(pageRequest).map(PostResponseDto::new);
-}
+if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedirect("join.jsp"); }
 
 /**
  * 게시물 필터 (Tag Name)
@@ -160,24 +155,21 @@ public List<PostResponseDto> listFilteredByDate(String createdDate) {
 
 ~~~java
 /**
- * 게시물 필터 (Tag Name)
+ * 팝업창이 나오도록 수정
  */
-@Override
-public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
-
-    QueryResults<Post> results = queryFactory
-            .selectFrom(post)
-            .innerJoin(postTag)
-                .on(post.idx.eq(postTag.post.idx))
-            .innerJoin(tag)
-                .on(tag.idx.eq(postTag.tag.idx))
-            .where(tag.name.eq(tagName))
-            .orderBy(post.idx.desc())
-                .limit(pageable.getPageSize())
-                .offset(pageable.getOffset())
-            .fetchResults();
-
-    return new PageImpl<>(results.getResults(), pageable, results.getTotal());
+ if (cnt > 0) {
+          // Display popup upon successful registration
+          response.setContentType("text/html;charset=UTF-8");
+          PrintWriter out = response.getWriter();
+          out.println("<script>alert('회원가입이 완료되었습니다!'); window.location.href='login.jsp';</script>");
+       } else {
+          // Display popup upon registration failure
+          response.setContentType("text/html;charset=UTF-8");
+          PrintWriter out = response.getWriter();
+          out.println("<script>alert('회원가입에 실패했습니다!'); window.location.href='회원가입.jsp';</script>");
+       }
+    }
+ }
 }
 ~~~
 
