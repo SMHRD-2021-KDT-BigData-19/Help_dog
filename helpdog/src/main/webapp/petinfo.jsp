@@ -3,8 +3,7 @@
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-		//세션에 저장되어있는 회원의 정보 가져오기
-		member_web loginMember = (member_web)session.getAttribute("loginMember");
+member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
 
 <html>
