@@ -152,9 +152,33 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
 ### 5.2. 마이페이지에서 사용자의 반려동물의 이름을 DB에서 불러오지 못하는 문제
 - 사용자가 로그인을 하게 되면 session에 user_id를 저장받고 user_id를 통해 db에서 pet_info 테이블로 접근하여 사용자의 반려동물 이름을 불러오도록 수정
 <details>
-<summary>수정된 코드</summary>
+<summary><b>수정된 코드</b></summary>
 <div markdown="1">
+// 세션에 저장되어있는 회원의 정보 가져오기
+    member_web loginMember = (member_web)session.getAttribute("loginMember");
 
+    // JDBC 연결 설정
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1523:XE";
+    String username = "sc_21K_bigdata_hacksim_2";
+    String password = "smhrd2";
+
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    String petNameResult = "";
+
+    try {
+        // JDBC 드라이버 로드
+        Class.forName(driver);
+
+        // 데이터베이스 연결
+        conn = DriverManager.getConnection(url, username, password);
+
+        // 특정 petName 값으로 pet_info 테이블 검색
+        String query = "SELECT * FROM pet_info WHERE user_id = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, loginMember.getId());
 </div>
 </details>
 
