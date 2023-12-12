@@ -3,7 +3,6 @@
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-		//세션에 저장되어있는 회원의 정보 가져오기
 		member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
 
@@ -102,8 +101,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     list-style: none;
-        margin: 0; /* 변경된 부분: 여백을 없애기 위해 margin을 0으로 설정 */
-    padding: 0; /* 변경된 부분: 여백을 없애기 위해 padding을 0으로 설정 */
+        margin: 0; 
+    padding: 0; 
 }
 
 
@@ -137,12 +136,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 </li>
                 <li><a href="login.jsp">캘린더(Calendar)</a></li>
                 <li><a href="팁loginX.jsp">팁(Tip)</a></li>
-
-             <!--    <li>
-                    <a href="mypage.jsp">마이페이지</a>
-                   
-                </li> -->
-
 
             </ul>
         </nav>

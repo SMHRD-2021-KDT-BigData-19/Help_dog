@@ -14,7 +14,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         #nav {
     position: fixed;
     top: 0;
-    left: 0; /* 좌측에 고정합니다. 다른 값을 사용하여 원하는 위치에 고정할 수 있습니다. */
+    left: 0; 
     width: 100%;
 }
 
@@ -26,7 +26,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 }
 
 #nav ul li {
-    margin-right: 20px; /* 각 메뉴 아이템 간의 간격을 조절합니다. */
+    margin-right: 20px; 
 }
 
 #nav ul li a {
@@ -39,7 +39,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 #nav ul ul {
     display: none;
     position: absolute;
-    top: 100%; /* 메뉴 아이템 아래에 위치하도록 설정합니다. */
+    top: 100%; 
     left: 0;
 }
     .id-number-input {
@@ -95,7 +95,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         }
         
         h1 {
-            font-size: 2.5em; /* 글자 크기를 조절하세요 */
+            font-size: 2.5em; 
             margin-bottom: 20px;
         }
 

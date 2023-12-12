@@ -132,10 +132,10 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         </div></section></article>
                         <h1 id="score">46점</h1>
                       <%
-    // 세션에 저장되어있는 회원의 정보 가져오기
+
     member_web loginMember = (member_web)session.getAttribute("loginMember");
 
-    // JDBC 연결 설정
+
     String driver = "oracle.jdbc.driver.OracleDriver";
     String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1523:XE";
     String username = "sc_21K_bigdata_hacksim_2";
@@ -147,13 +147,12 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     String petNameResult = "";
 
     try {
-        // JDBC 드라이버 로드
+        
         Class.forName(driver);
 
-        // 데이터베이스 연결
+
         conn = DriverManager.getConnection(url, username, password);
 
-        // 특정 petName 값으로 pet_info 테이블 검색
         String query = "SELECT * FROM pet_info WHERE user_id = ?";
         pstmt = conn.prepareStatement(query);
         pstmt.setString(1, loginMember.getId());
@@ -165,8 +164,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         if (rs.next()) {
         	petNameResult = rs.getString("pet_name");
 
-            // 가져온 값들을 사용하여 출력하거나 다른 작업 수행
-            %><% // 가져온 값들을 사용하여 출력하거나 다른 작업 수행 %>
+           
+            %><%  %>
 <div style="text-align: center; margin-right: 50px; font-size: 35px; font-weight: bold;">
     <h1 style="text-align:left"><%= petNameResult %>의 건강상태</h1>
 </div>
