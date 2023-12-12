@@ -1,32 +1,27 @@
 # Help_dog
 대시보드를 활용한 반려동물 건강 관리 서비스
 
-# :pushpin: goQuality
->고퀄리티 개발 컨텐츠 공유 서비스  
-> 데모사이트 링크
-
 </br>
 
 ## 1. 제작 기간 & 참여 인원
-- 2019년 2월 18일 ~ 4월 5일
-- 개인 프로젝트
+- 2023년 11월 15일 ~ 12월 12일
+- 팀 프로젝트
 
 </br>
 
 ## 2. 사용 기술
 #### `Back-end`
-  - Java 8
-  - Spring Boot 2.3
-  - Gradle
-  - Spring Data JPA
-  - QueryDSL
-  - H2
-  - MySQL 5.7
-  - Spring Security
-  - Jsoup
+  - Java
+  - Apache Tomcat
+  - Python
+  - JDBC
+  - Oracle
+  
 #### `Front-end`
-  - Vue.js 3.0
-  - Element UI
+  - Css
+  - Js
+  - Chart.js
+  - Full Calendar
 
 </br>
 
@@ -36,9 +31,8 @@
 
 
 ## 4. 핵심 기능
-이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
-사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
-이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
+이 서비스의 핵심 기능은 크롤링, Chart.js, FullCalendar API를 이용한 일정관리기능입니다.
+사용자는 단지 게시물을 클릭하거나 날짜를 선택하고, 정보만 입력하면 끝입니다.
 
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
