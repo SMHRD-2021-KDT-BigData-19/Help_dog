@@ -154,6 +154,8 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
 <details>
 <summary><b>수정된 코드</b></summary>
 <div markdown="1">
+
+  ~~~ java
 // 세션에 저장되어있는 회원의 정보 가져오기
     member_web loginMember = (member_web)session.getAttribute("loginMember");
 
@@ -179,6 +181,7 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
         String query = "SELECT * FROM pet_info WHERE user_id = ?";
         pstmt = conn.prepareStatement(query);
         pstmt.setString(1, loginMember.getId());
+~~~
 </div>
 </details>
 
