@@ -24,6 +24,14 @@
   - Chart.js
   - Full Calendar
 
+#### `IDE`
+  - Visual Studio Code
+  - eclipse
+
+#### `Collaboration`
+  - GitHub
+  - Notion
+
 </br>
 
 ## 3. ERD 설계
