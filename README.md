@@ -36,9 +36,7 @@
 
 ## 3. ERD 설계
 
-![Alt text](/path/to/img.jpg "Optional title")
 ![erd](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/d566c282-01e4-4de9-9379-da8313de80b1)
-
 
 ## 4. 핵심 기능
 이 서비스의 핵심 기능은 크롤링, Chart.js, FullCalendar API를 이용한 일정관리기능입니다.
