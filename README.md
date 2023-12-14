@@ -35,6 +35,9 @@
 </br>
 
 ## 3. ERD 설계
+![ERD](/path/to/C:\Users\smhrd\Desktop\핵심 프로젝트 자료들\erd.png)
+![Alt text](/path/to/img.jpg "Optional title")
+
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
 ![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
 
