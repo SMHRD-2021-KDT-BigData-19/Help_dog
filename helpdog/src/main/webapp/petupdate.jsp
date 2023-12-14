@@ -16,8 +16,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <title>마이페이지</title>
     <link rel="stylesheet" href="assets/css/main.css" />
 
-
-   
 </head>
 <body class="is-preload">
    <!-- 파일 선택 input을 감추고, JavaScript에서 조작하기 위해 ID 부여 -->
@@ -61,10 +59,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                     </a>
             			</div>
             			<%
-    // URL 파라미터에서 user_id와 pet_name 값을 가져옴
-    String user_id = request.getParameter("user_id");
-
-%>
+            			String user_id = request.getParameter("user_id");
+            			%>
                 <br>
                 <br>
                     <form action="petUpdateCon" method="post">
@@ -128,5 +124,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

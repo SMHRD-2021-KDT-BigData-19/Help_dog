@@ -17,7 +17,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Added styles for better positioning */
         .profile-edit-container {
             text-align: center;
         }
@@ -25,17 +24,17 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         .save-button {
             margin-right: 32%;
          margin-top: 10px;
-            float: right; /* Aligns the button to the right */
+            float: right;
         }
 
       .edit-buttons {
-          text-align: center; /* 가운데 정렬 */
-          margin-right: 50px; /* 왼쪽으로 10px 이동 (원하는 크기로 조절) */
+          text-align: center;
+          margin-right: 50px;
       }
       
       .edit-buttons button {
-          font-size: 16px; /* 원하는 크기로 조절하세요 */
-          padding: 10px 20px; /* 버튼 패딩 조절 (상하좌우) */
+          font-size: 16px;
+          padding: 10px 20px;
           width: 300px;
       }
 
@@ -43,12 +42,12 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
       
       .left-button {
           float: left;
-          margin: 225px 10px 20px 0; /* Adjusted margin for spacing */
+          margin: 225px 10px 20px 0;
       }
       
       .right-button {
           float: right;
-          margin: 225px 0 20px 10px; /* Adjusted margin for spacing */
+          margin: 225px 0 20px 10px;
       }
       
       
@@ -59,12 +58,10 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     </style>
    <script>
       function openFileInput() {
-         // 프로필 이미지를 클릭했을 때 파일 선택 창 열기
          document.getElementById('file-input').click();
       }
    
       function displayImage(input) {
-         // 파일 선택 창에서 이미지를 선택한 경우 프로필 이미지 변경
          if (input.files && input.files[0]) {
             var reader = new FileReader();
    
@@ -79,7 +76,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
    
 </head>
 <body class="is-preload">
-   <!-- 파일 선택 input을 감추고, JavaScript에서 조작하기 위해 ID 부여 -->
 <input type="file" id="file-input" style="display: none;" onchange="displayImage(this)" />
 
     <div id="page-wrapper">
@@ -109,24 +105,18 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
        </div>
 
             <div>
-                    <!-- Main -->
                     <section class="page-wrapper">
                         <div class="container">
                             <div class="col-8 col-12-narrower">
                                 <div id="content">
-                                    <!-- Content -->
                                     <article>
                                         <header></header>
                                         <br>
             <div style="text-align: center;">
 
-            
-                <!-- Large profile image -->
                 <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
                     <img id="profile-image" src="images/프로필.png" alt="" style="max-width: 450px; height: 450px; cursor: pointer;" onclick="openFileInput('profile-image')" />
                 </span>
-            
-                <!-- Small image next to the profile image -->
                 <span class="image featured" style="overflow: hidden; display: inline-block; margin-left: 10px;">
                     <img id="small-image" src="images/다운로드.png" alt="" style="max-width: 50px; height: 50px; margin-top: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
                 </span>
@@ -138,10 +128,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <%@ page import="com.smhrd.domain.member_web" %>
 
 <%
-    // 세션에 저장되어있는 회원의 정보 가져오기
     member_web loginMember = (member_web)session.getAttribute("loginMember");
 
-    // JDBC 연결 설정
     String driver = "oracle.jdbc.driver.OracleDriver";
     String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1523:XE";
     String username = "sc_21K_bigdata_hacksim_2";
@@ -153,26 +141,20 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     String petNameResult = "";
 
     try {
-        // JDBC 드라이버 로드
         Class.forName(driver);
 
-        // 데이터베이스 연결
         conn = DriverManager.getConnection(url, username, password);
 
-        // 특정 petName 값으로 pet_info 테이블 검색
         String query = "SELECT * FROM pet_info WHERE user_id = ?";
         pstmt = conn.prepareStatement(query);
         pstmt.setString(1, loginMember.getId());
 
-        // 쿼리 실행 및 결과 가져오기
         rs = pstmt.executeQuery();
         
-        // 결과 출력
         if (rs.next()) {
         	petNameResult = rs.getString("pet_name");
 
-            // 가져온 값들을 사용하여 출력하거나 다른 작업 수행
-            %><% // 가져온 값들을 사용하여 출력하거나 다른 작업 수행 %>
+            %>
 <div style="text-align: center; margin-right:50px; font-size: 35px; font-weight: bold;">
     <%= petNameResult %>
 </div>
@@ -181,7 +163,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     } catch (Exception e) {
         e.printStackTrace();
     } finally {
-        // 연결 해제
         try {
             if (rs != null) rs.close();
             if (pstmt != null) pstmt.close();
@@ -191,10 +172,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         }
     }
 %>
-
-
-
-                            <!-- Edit Buttons ... -->
 
 							<br><br>
 							<div class="edit-buttons">
@@ -214,22 +191,16 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             </div>
         </section>
 
-        <!-- Footer ... -->
-
     </div>
 <script>
     function openFileInput(targetId) {
-        // 파일 선택 창을 여는 함수
         document.getElementById('file-input').addEventListener('change', function () {
             displayImage(this, targetId);
         });
-
-        // 파일 선택 창 열기
         document.getElementById('file-input').click();
     }
 
     function displayImage(input, targetId) {
-        // 파일 선택 창에서 이미지를 선택한 경우 프로필 이미지 변경
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
@@ -249,5 +220,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

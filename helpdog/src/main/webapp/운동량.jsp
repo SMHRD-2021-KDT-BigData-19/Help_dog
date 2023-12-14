@@ -67,5 +67,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <script src="assets/js/main.js"></script>
          <script src="assets/js/운동량.js"></script>
    </body>
-
 </html>

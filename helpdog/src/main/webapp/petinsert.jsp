@@ -3,7 +3,6 @@
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-		// 세션에 저장되어있는 회원의 정보 가져오기
 		member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
 <html>
@@ -29,13 +28,9 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	               </li>
 	               <li><a href="Calendar.jsp">캘린더(Calendar)</a></li>
 	               <li><a href="팁.jsp">팁(Tip)</a></li>
-	               <li>
 	                <a href="mypage.jsp">마이페이지</a>
 	                
-	            </li>
-	            <li><a href="loginbefore.jsp">로그아웃</a></li>
-	               
-	            </li>
+	            <li><a href="loginbefore.jsp">로그아웃</a></li>           
 	
 	           </ul>
 	       </nav>
@@ -102,14 +97,11 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	    <button type="submit" name="sub" value="추가하기">추가하기</button>
 	 </div>
 	 </form>
-      <!-- Scripts -->
          <script src="assets/js/jquery.min.js"></script>
          <script src="assets/js/jquery.scrolly.min.js"></script>
          <script src="assets/js/jquery.scrollex.min.js"></script>
          <script src="assets/js/skel.min.js"></script>
          <script src="assets/js/util.js"></script>
-         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
          <script src="assets/js/main.js"></script>
    </body>
-
 </html>

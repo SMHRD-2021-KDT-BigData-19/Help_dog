@@ -110,26 +110,24 @@
         const mySchBColor = document.querySelector("#schBColor");
         const mySchFColor = document.querySelector("#schFColor");
 
-        //캘린더 헤더 옵션
         const headerToolbar = {
                left: 'prevYear,prev,next,nextYear today',
                  center: 'title',
                  right: 'dayGridMonth,dayGridWeek,timeGridDay'
         }
 
-        // 캘린더 생성 옵션
         const calendarOption = {
-            height: '700px', // calendar 높이 설정
-            expandRows: true, // 화면에 맞게 높이 재설정
-            slotMinTime: '09:00', // Day 캘린더 시작 시간
-            slotMaxTime: '18:00', // Day 캘린더 종료 시간
-            initialView: 'dayGridMonth',  // default: dayGridMonth 'dayGridWeek', 'timeGridDay', 'listWeek'
+            height: '700px',
+            expandRows: true,
+            slotMinTime: '09:00',
+            slotMaxTime: '18:00',
+            initialView: 'dayGridMonth',
             locale: 'kr',      
             selectable: true,   
             selectMirror: false,  
             navLinks: false,      
             weekNumbers: false,   
-            editable: true,      // event(일정) 
+            editable: true,
      
             dayMaxEventRows: true,  
        
@@ -137,12 +135,9 @@
    
         }
 
-        // 캘린더 생성
         const calendar = new FullCalendar.Calendar(calendarEl, calendarOption);
-        // 캘린더 그리기
         calendar.render();
 
-        // 캘린더 이벤트 등록
         calendar.on("eventAdd", info => console.log("Add:", info));
         calendar.on("eventChange", info => console.log("Change:", info));
         calendar.on("eventRemove", info => console.log("Remove:", info));
@@ -150,7 +145,7 @@
         calendar.on("eventClick", info => {
             console.log("eClick:", info);
             if (confirm("일정을 삭제하시겠습니까?")) {
-                info.event.remove(); // 이벤트 삭제
+                info.event.remove();
             }
             console.log('Event: ', info.event.extendedProps);
             console.log('Coordinates: ', info.jsEvent);
@@ -170,7 +165,6 @@
             YrModal.style.display = "block";
         });
 
-        // 일정(이벤트) 추가
         function fCalAdd() {
             if (!mySchTitle.value) {
                 alert("*예방접종/진료종류 입력해주세요*")
@@ -197,7 +191,6 @@
             fMClose();
         }
 
-        // 모달 닫기
         function fMClose() {
             YrModal.style.display = "none";
         }
@@ -205,6 +198,4 @@
     </script>
     <br><br><br>
 </body>
-
-
 </html>

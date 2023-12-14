@@ -160,5 +160,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
          <script src="assets/js/main.js"></script>
 
    </body>
-
 </html>

@@ -106,14 +106,11 @@ member_web loginMember = (member_web)session.getAttribute("loginMember");
     <input type="button" value="반려동물 추가하기" onclick="addInput();" />
     <input type="submit" value="저장하기">
  </div>
-   <!-- Scripts -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/jquery.dropotron.min.js"></script>
    <script src="assets/js/browser.min.js"></script>
    <script src="assets/js/breakpoints.min.js"></script>
    <script src="assets/js/util.js"></script>
    <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

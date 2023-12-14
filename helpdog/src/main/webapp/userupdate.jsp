@@ -3,7 +3,6 @@
 pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-    //세션에 저장되어있는 회원의 정보 가져오기
     member_web loginMember = (member_web)session.getAttribute("loginMember");
 %>
 
@@ -40,12 +39,10 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         </nav>
         <form action="userUpdateCon" method="post">
             
-            <%
-    // URL 파라미터에서 user_id와 pet_name 값을 가져옴
+    <%
     String user_id = request.getParameter("user_id");
     String pet_name = request.getParameter("pet_name");
-
-%>
+	%>
             
             <div id="centersidebar" style="text-align: center; margin-left: 150px">
                 <a href="userupdate.jsp?user_id=<%= loginMember.getId() %>&pet_name=<%= pet_name %>">
@@ -87,7 +84,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                 </div>
             </div>
         </form>
-        <!-- Scripts -->
+        
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.dropotron.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
@@ -96,18 +93,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         <script src="assets/js/main.js"></script>
     </div>
     <script>
-/*     $(document).ready(function () {
-        $('form').submit(function () {
-            // 여기에 폼 제출 로직을 추가하세요 (필요한 경우)
-
-            // 폼 제출 후 mypage.jsp로 리다이렉트
-            window.location.href = 'mypage.jsp';
-            
-            // 기본 폼 제출을 막습니다 (예: AJAX를 사용하여 처리하는 경우)
-            return false;
-        });
-    }); */
 </script>
 </body>
-
 </html>

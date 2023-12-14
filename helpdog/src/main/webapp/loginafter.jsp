@@ -17,7 +17,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>도와줄개</title>
     <link rel="stylesheet" href="assets/css/main.css" />
-       <!-- chart.js 라이브러리 가져오는 script  -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <style>
       
@@ -125,7 +124,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
                         <header></header>
                         <div style="text-align: left;">
                         <br>
-                            <!-- Large profile image -->
                             <span class="image featured" style="border-radius: 50%; overflow: hidden; display: inline-block;">
                                 <img id="profile-image" src="images/멍멍멍이.png" alt="" style="max-width: 300px; height: 300px; cursor: pointer;" onclick="openFileInput('profile-image')" />
                             </span>
@@ -157,10 +155,8 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         pstmt = conn.prepareStatement(query);
         pstmt.setString(1, loginMember.getId());
 
-        // 쿼리 실행 및 결과 가져오기
         rs = pstmt.executeQuery();
         
-        // 결과 출력
         if (rs.next()) {
         	petNameResult = rs.getString("pet_name");
 
@@ -175,7 +171,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     } catch (Exception e) {
         e.printStackTrace();
     } finally {
-        // 연결 해제
         try {
             if (rs != null) rs.close();
             if (pstmt != null) pstmt.close();
@@ -185,7 +180,6 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
         }
     }
 %>
-    <!-- chart.js 그래프 크기  -->
         
             <div id = "loginChart" >
             <canvas id="login" width="500" height="300"></canvas>
@@ -195,8 +189,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             <canvas id="login2" width="500" height="300"></canvas>
             </div>
            
-    </div> 
-  
+    </div>
     
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -207,5 +200,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 <script src="assets/js/chartModule.js"></script>  
 <script src="assets/js/chartModule2.js"></script> 
 </body>
-
 </html>

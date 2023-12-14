@@ -36,10 +36,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
               </ul>
           </nav>
       </div>
-    
- 
-      
-         <!-- Main --> 
+
         <div id ="sidebar">  
             <h2>식사량</h2>
             <div class="check">

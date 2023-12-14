@@ -90,14 +90,14 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
             display: flex;
             flex-direction: column;
             position: absolute;
-            background-color: #333; /* Background color for sub-menu */
+            background-color: #333;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         #nav ul ul {
     display: none;
     position: absolute;
-    background-color: #37c0fb; /* Background color for sub-menu */
+    background-color: #37c0fb;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     list-style: none;
@@ -115,7 +115,7 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    text-align: left; /* 변경된 부분: 가운데 정렬 */
+    text-align: left;
 }
     </style>
 </head>
@@ -181,5 +181,4 @@ pageEncoding ="UTF-8"  isELIgnored ="false" %>
 	<b>고객센터</b>
 	</a>	
 </div>
-
 </html>
