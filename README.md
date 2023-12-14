@@ -35,11 +35,9 @@
 </br>
 
 ## 3. ERD 설계
-![ERD](/path/to/C:\Users\smhrd\Desktop\핵심 프로젝트 자료들\erd.png)
-![Alt text](/path/to/img.jpg "Optional title")
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
-![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
+![Alt text](/path/to/img.jpg "Optional title")
+![erd](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/d566c282-01e4-4de9-9379-da8313de80b1)
 
 
 ## 4. 핵심 기능
