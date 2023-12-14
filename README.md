@@ -51,7 +51,8 @@
 ![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/1c705b76-6dd1-4315-8cb7-4b9f47672382)
 
 ### 4.2. 사용자 요청
-![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/907ad8cf-8edb-4deb-90aa-12b72e7f3fca)
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/ad9222a1-4e55-4307-8302-d31ea411a869)
+
 
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/blob/da0dc858eb640dae01fc50eb8660fa3252a90848/helpdog/src/main/webapp/Calendar.jsp#L7)
@@ -63,7 +64,8 @@
 
 ### 4.3. Controller
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/33fd21d0-c03b-4b65-a99c-4d687e663f07)
+
 
 - **요청 처리** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/d35d29b64c0e8b9653862bdcc1e6b997d2436ec9/index.html#L57C1-L57C202)
   - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
@@ -73,7 +75,8 @@
 
 ### 4.4. Service
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/114ffcf4-dfa3-4e5a-b36a-87c9e4a53dc7)
+
 
 - **Http 프로토콜 추가 및 trim()** :pushpin: [코드 확인]()
   - 사용자가 URL 입력 시 Http 프로토콜을 생략하거나 공백을 넣은 경우,  
