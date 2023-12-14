@@ -47,7 +47,8 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/1c705b76-6dd1-4315-8cb7-4b9f47672382)
 
 ### 4.2. 사용자 요청
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
