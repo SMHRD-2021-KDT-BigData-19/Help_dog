@@ -51,7 +51,7 @@
 ![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/1c705b76-6dd1-4315-8cb7-4b9f47672382)
 
 ### 4.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/0f767b30-c142-4d70-8380-cf2daf31ce78)
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/blob/da0dc858eb640dae01fc50eb8660fa3252a90848/helpdog/src/main/webapp/Calendar.jsp#L7)
   - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
