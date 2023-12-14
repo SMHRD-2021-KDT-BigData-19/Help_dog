@@ -196,4 +196,5 @@ if (cnt>0){ response.sendRedirect("joinSuccess.jsp"); } else{ response.sendRedir
 </br>
 
 ## 6. 회고 / 느낀점
->프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
+![image](https://github.com/SMHRD-2021-KDT-BigData-19/Help_dog/assets/151595288/373dd9f4-63d1-47fd-be9a-f776916d0244)
+
